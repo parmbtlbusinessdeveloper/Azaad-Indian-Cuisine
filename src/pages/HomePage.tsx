@@ -31,8 +31,9 @@ export const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
-            {/* Left Column - Text Content */}
+          {/* Desktop Layout */}
+          <div className="hidden lg:grid grid-cols-2 gap-12 items-center min-h-screen py-20">
+            {/* Left Column - Text Content (Desktop) */}
             <div className="text-white space-y-8 fade-in">
               <div className="space-y-6">
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-wide">
@@ -76,7 +77,7 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Column - Video Section */}
+            {/* Right Column - Video Section (Desktop) */}
             <div className="flex flex-col items-center space-y-6 fade-in">
               {/* Video Placeholder */}
               <div className="relative w-full max-w-lg">
@@ -116,6 +117,96 @@ export const HomePage: React.FC = () => {
                 <span>Watch Our Kitchen in Action</span>
               </a>
             </div>
+          </div>
+          
+          {/* Mobile Layout */}
+          <div className="lg:hidden flex flex-col items-center min-h-screen py-12 space-y-8">
+            {/* Video Section - Top on Mobile */}
+            <div className="w-full max-w-sm fade-in">
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20">
+                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-3 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer">
+                        <Play size={24} className="text-red-900 ml-1" />
+                      </div>
+                      <p className="font-serif text-base font-semibold">Kitchen in Action</p>
+                      <p className="font-sans text-xs text-gray-300">See our chefs at work</p>
+                    </div>
+                  </div>
+                  {/* Decorative overlay */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="w-full h-full" style={{
+                      backgroundImage: `
+                        linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.1) 50%, transparent 60%),
+                        radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.2) 20%, transparent 40%)
+                      `
+                    }}></div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full opacity-80"></div>
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-500 rounded-full opacity-80"></div>
+              </div>
+            </div>
+            
+            {/* Text Content - Centered on Mobile */}
+            <div className="text-white text-center space-y-6 fade-in px-4">
+              <div className="space-y-4">
+                <h1 className="font-serif text-4xl sm:text-5xl font-bold leading-tight tracking-wide">
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
+                    Authentic Indian
+                  </span>
+                  <span className="block text-white mt-2">
+                    Cuisine
+                  </span>
+                </h1>
+                
+                {/* Glowing animated underline */}
+                <div className="flex justify-center">
+                  <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg animate-pulse"></div>
+                </div>
+                
+                <p className="font-serif text-lg sm:text-xl text-yellow-200 font-medium leading-relaxed italic max-w-sm mx-auto">
+                  Bold flavors. Warm hospitality.<br />
+                  A culinary journey worth sharing.
+                </p>
+              </div>
+              
+              <p className="font-sans text-base text-gray-200 leading-relaxed max-w-md mx-auto font-light">
+                Experience the rich heritage of Punjab through our carefully crafted dishes, 
+                prepared with traditional spices and techniques passed down through generations.
+              </p>
+            </div>
+            
+            {/* Action Buttons - Mobile */}
+            <div className="flex flex-col space-y-4 w-full max-w-sm px-4 fade-in">
+              <Link 
+                to="/menu"
+                className="font-sans bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg text-center hover:shadow-yellow-500/25"
+              >
+                View Menu
+              </Link>
+              <a 
+                href="https://www.toasttab.com/azaad-indian-cuisine"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300 text-center"
+              >
+                Order Now
+              </a>
+            </div>
+            
+            {/* Watch Button - Mobile */}
+            <Link 
+              to="/gallery"
+              className="font-sans bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2 fade-in"
+            >
+              <Play size={16} />
+              <span>Watch Our Kitchen in Action</span>
+            </Link>
           </div>
         </div>
       </section>
