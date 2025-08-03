@@ -155,7 +155,9 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex items-center space-x-6">
               <a 
-                href="#" 
+               href="https://www.facebook.com/people/Azaad-Indian-cuisine/61578610806090/"
+               target="_blank"
+               rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110"
                 aria-label="Visit our Facebook page"
               >
@@ -370,7 +372,9 @@ export const Footer: React.FC = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-4">
             <a 
-              href="#" 
+             href="https://www.facebook.com/people/Azaad-Indian-cuisine/61578610806090/"
+             target="_blank"
+             rel="noopener noreferrer"
               className="flex flex-col items-center space-y-1 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110 p-2"
               aria-label="Visit our Facebook page"
             >
