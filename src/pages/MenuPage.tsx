@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 interface MenuItem {
   id: string;
@@ -368,7 +369,8 @@ export const MenuPage: React.FC = () => {
       {/* Menu Navigation */}
       <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
             {menuSections.map((section, index) => (
               <button
                 key={sectionIds[index]}
@@ -382,6 +384,37 @@ export const MenuPage: React.FC = () => {
                 {section.title}
               </button>
             ))}
+          </div>
+          
+          {/* Mobile Dropdown Navigation - Hidden on desktop */}
+          <div className="md:hidden py-4">
+            <div className="relative">
+              <select
+                value={activeSection}
+                onChange={(e) => {
+                  setActiveSection(e.target.value);
+                  // Smooth scroll to section if not 'all'
+                  if (e.target.value !== 'all') {
+                    const element = document.getElementById(e.target.value);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }
+                }}
+                className="w-full appearance-none bg-white border-2 border-red-900 rounded-lg px-4 py-3 pr-10 text-red-900 font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200"
+              >
+                <option value="all">View Complete Menu</option>
+                {menuSections.map((section, index) => (
+                  <option key={sectionIds[index]} value={sectionIds[index]}>
+                    {section.title}
+                  </option>
+                ))}
+              </select>
+              {/* Custom dropdown arrow */}
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <ChevronDown className="h-5 w-5 text-red-900" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
