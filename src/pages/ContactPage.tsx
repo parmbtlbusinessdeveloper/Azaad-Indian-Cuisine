@@ -221,7 +221,7 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-white">
+      <section id="map" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-red-900 text-center mb-8">Find Us</h2>
           <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg shadow-lg flex items-center justify-center border border-yellow-200">
