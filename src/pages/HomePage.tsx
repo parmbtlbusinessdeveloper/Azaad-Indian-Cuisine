@@ -124,7 +124,8 @@ export const HomePage: React.FC = () => {
             <div className="w-full max-w-sm elegant-fade-in mt-8">
               {/* Logo above video on mobile */}
               <div className="flex justify-center mb-3 mt-4">
-                <img 
+              <div className="flex justify-center mb-3 mt-2">
+                <img
                   src="https://i.imgur.com/13b6Lyj.png" 
                   alt="Azaad Indian Cuisine" 
                   className="h-16 w-auto filter drop-shadow-lg"
