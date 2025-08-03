@@ -368,12 +368,12 @@ export const MenuPage: React.FC = () => {
       {/* Menu Navigation */}
       <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
+          <div className="flex overflow-x-auto py-4 space-x-4 scrollbar-hide">
             {menuSections.map((section, index) => (
               <button
                 key={sectionIds[index]}
                 onClick={() => setActiveSection(sectionIds[index])}
-                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
+                className={`whitespace-nowrap px-3 py-2 rounded-full font-medium transition-all duration-200 flex-shrink-0 text-sm ${
                   activeSection === sectionIds[index]
                     ? 'bg-red-900 text-white'
                     : 'text-red-900 hover:bg-red-100'
@@ -382,6 +382,16 @@ export const MenuPage: React.FC = () => {
                 {section.title}
               </button>
             ))}
+            <button
+              onClick={() => setActiveSection('all')}
+              className={`whitespace-nowrap px-3 py-2 rounded-full font-medium transition-all duration-200 flex-shrink-0 text-sm ${
+                activeSection === 'all'
+                  ? 'bg-red-900 text-white'
+                  : 'text-red-900 hover:bg-red-100'
+              }`}
+            >
+              View All
+            </button>
           </div>
         </div>
       </div>
