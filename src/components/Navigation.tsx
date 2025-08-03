@@ -87,10 +87,10 @@ export const Navigation: React.FC = () => {
             </svg>
             
             <div className="text-logo-container">
-              <div className="font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl tracking-wide leading-tight text-yellow-300 group-hover:text-yellow-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:tracking-wider logo-text-glow">
+              <div className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide leading-tight text-yellow-300 group-hover:text-yellow-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:tracking-wider logo-text-glow">
                 Azaad Indian Cuisine
               </div>
-              <div className="text-xs sm:text-sm lg:text-base font-light italic tracking-wider leading-none mt-0.5 text-yellow-300 group-hover:text-yellow-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:tracking-widest logo-subtitle-glow">
+              <div className="text-xs sm:text-sm font-light italic tracking-wider leading-none mt-0.5 text-yellow-300 group-hover:text-yellow-100 transition-all duration-500 ease-out group-hover:scale-105 group-hover:tracking-widest logo-subtitle-glow">
                 Discover the Taste of India
               </div>
             </div>
