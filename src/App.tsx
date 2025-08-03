@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
+import { LoadingScreen } from './components/LoadingScreen';
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { GalleryPage } from './pages/GalleryPage';
@@ -20,6 +21,16 @@ const ScrollToTop: React.FC = () => {
 };
 
 function App() {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-amber-50">
