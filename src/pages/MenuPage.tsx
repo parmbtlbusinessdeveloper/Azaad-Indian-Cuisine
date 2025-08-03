@@ -470,7 +470,7 @@ export const MenuPage: React.FC = () => {
       </div>
 
       {/* Show All Sections Button */}
-      <div className="text-center pb-12">
+      <div className="hidden lg:block text-center pb-12">
         <button
           onClick={() => setActiveSection('all')}
           className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
