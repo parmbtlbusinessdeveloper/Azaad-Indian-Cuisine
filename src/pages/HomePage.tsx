@@ -30,17 +30,6 @@ export const HomePage: React.FC = () => {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
         
-        {/* Logo positioned at top left */}
-        <div className="absolute top-8 left-8 z-20">
-          <Link to="/">
-            <img 
-              src="https://i.imgur.com/13b6Lyj.png" 
-              alt="Azaad Indian Cuisine" 
-              className="h-16 w-auto drop-shadow-lg"
-            />
-          </Link>
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
             {/* Left Column - Text Content */}
