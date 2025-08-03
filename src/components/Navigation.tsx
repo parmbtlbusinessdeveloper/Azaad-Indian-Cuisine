@@ -31,9 +31,6 @@ export const Navigation: React.FC = () => {
         : 'bg-red-900/90 backdrop-blur-sm shadow-lg'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Subtle top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-60"></div>
-        
         <div className="flex justify-between items-center h-18 py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
@@ -182,11 +179,8 @@ export const Navigation: React.FC = () => {
         </div>
       </div>
 
-      {/* Enhanced Decorative Border */}
-      <div className="relative">
-        <div className="h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent blur-sm"></div>
-      </div>
+      {/* Simple Bottom Border */}
+      <div className="h-0.5 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500 opacity-80"></div>
     </nav>
   );
 };
