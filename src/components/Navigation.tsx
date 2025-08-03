@@ -181,36 +181,12 @@ export const Navigation: React.FC = () => {
           </div>
         </div>
       </div>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`block px-3 py-2 text-white hover:text-yellow-300 hover:bg-red-800 rounded-md transition-colors duration-200 ${
-                    location.pathname === link.path ? 'text-yellow-300 bg-red-800' : ''
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <button className="w-full mt-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-4 py-2 rounded-full font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all duration-200">
-                Order Now
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
 
       {/* Enhanced Decorative Border */}
       <div className="relative">
         <div className="h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/50 to-transparent blur-sm"></div>
       </div>
-    </nav>
-  );
-};
-      {/* Decorative border */}
-      <div className="h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500"></div>
     </nav>
   );
 };
