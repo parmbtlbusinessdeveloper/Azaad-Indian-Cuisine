@@ -716,6 +716,19 @@ html {
 
 /* Mobile optimizations for logo animations */
 @media (max-width: 768px) {
+  /* Navigation optimizations */
+  .text-logo-container .font-bold {
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+  
+  .text-logo-container .text-xs {
+    font-size: 0.65rem;
+    margin-top: 0;
+    letter-spacing: 0.3px;
+  }
+  
   .group:hover .logo-glow {
     filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
   }
