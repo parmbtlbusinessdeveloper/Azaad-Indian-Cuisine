@@ -252,7 +252,7 @@ export const HomePage: React.FC = () => {
         {/* 5 Star Reviews Button */}
         <div className="text-center mt-12">
           <a 
-            href="[PASTE GOOGLE REVIEWS URL HERE]"
+            href="https://share.google/aon3Tc6jHesZ7trzs"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 border-2 border-yellow-400 hover:border-yellow-500 rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50 review-element"
