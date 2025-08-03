@@ -56,6 +56,15 @@ export const HomePage: React.FC = () => {
 
             {/* Right Column - Video Section (Desktop) */}
             <div className="flex flex-col items-center space-y-6 elegant-fade-in">
+              {/* Logo - Desktop Only */}
+              <div className="mb-4">
+                <img 
+                  src="https://i.imgur.com/13b6Lyj.png" 
+                  alt="Azaad Indian Cuisine" 
+                  className="h-20 w-auto filter drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 hover:scale-105"
+                />
+              </div>
+              
               {/* Video Placeholder */}
               <div className="relative w-full max-w-lg">
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 premium-card">
