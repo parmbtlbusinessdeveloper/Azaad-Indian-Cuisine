@@ -154,9 +154,33 @@ export const Footer: React.FC = () => {
               the finest spices.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Facebook</a>
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Instagram</a>
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Yelp</a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                aria-label="Follow us on Facebook"
+              >
+                <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                aria-label="Follow us on Instagram"
+              >
+                <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.175-1.297-.49-.368-.315-.49-.753-.49-1.243 0-.49.122-.928.49-1.243.369-.315.807-.49 1.297-.49s.928.175 1.297.49c.315.315.49.753.49 1.243 0 .49-.175.928-.49 1.243-.369.315-.807.49-1.297.49zm-4.381 1.418c-1.891 0-3.428 1.537-3.428 3.428s1.537 3.428 3.428 3.428 3.428-1.537 3.428-3.428-1.537-3.428-3.428-3.428z"/>
+                </svg>
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                aria-label="Find us on Yelp"
+              >
+                <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.271 17.814c1.217 0 2.203-.986 2.203-2.203 0-1.217-.986-2.203-2.203-2.203-1.217 0-2.203.986-2.203 2.203 0 1.217.986 2.203 2.203 2.203zm6.068-5.407c-.271-.542-.813-.949-1.491-1.085l-3.389-.678c-.407-.068-.678-.407-.678-.814 0-.407.271-.746.678-.814l3.389-.678c.678-.136 1.22-.542 1.491-1.085.271-.542.203-1.22-.203-1.695l-2.034-2.373c-.271-.339-.678-.542-1.085-.542-.407 0-.814.203-1.085.542l-2.034 2.373c-.407.475-.475 1.153-.203 1.695.271.542.813.949 1.491 1.085l3.389.678c.407.068.678.407.678.814 0 .407-.271.746-.678.814l-3.389.678c-.678.136-1.22.542-1.491 1.085-.271.542-.203 1.22.203 1.695l2.034 2.373c.271.339.678.542 1.085.542.407 0 .814-.203 1.085-.542l2.034-2.373c.407-.475.475-1.153.203-1.695z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -341,9 +365,34 @@ export const Footer: React.FC = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-4">
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Facebook</a>
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Instagram</a>
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Yelp</a>
+            <a 
+              href="#" 
+              className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg active:scale-95"
+              aria-label="Follow us on Facebook"
+            >
+              <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg active:scale-95"
+              aria-label="Follow us on Instagram"
+            >
+              <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.175-1.297-.49-.368-.315-.49-.753-.49-1.243 0-.49.122-.928.49-1.243.369-.315.807-.49 1.297-.49s.928.175 1.297.49c.315.315.49.753.49 1.243 0 .49-.175.928-.49 1.243-.369.315-.807.49-1.297.49zm-4.381 1.418c-1.891 0-3.428 1.537-3.428 3.428s1.537 3.428 3.428 3.428 3.428-1.537 3.428-3.428-1.537-3.428-3.428-3.428z"/>
+              </svg>
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 bg-yellow-300 hover:bg-yellow-200 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg active:scale-95"
+              aria-label="Find us on Yelp"
+            >
+              <svg className="w-5 h-5 text-red-900" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.271 17.814c1.217 0 2.203-.986 2.203-2.203 0-1.217-.986-2.203-2.203-2.203-1.217 0-2.203.986-2.203 2.203 0 1.217.986 2.203 2.203 2.203zm6.068-5.407c-.271-.542-.813-.949-1.491-1.085l-3.389-.678c-.407-.068-.678-.407-.678-.814 0-.407.271-.746.678-.814l3.389-.678c.678-.136 1.22-.542 1.491-1.085.271-.542.203-1.22-.203-1.695l-2.034-2.373c-.271-.339-.678-.542-1.085-.542-.407 0-.814.203-1.085.542l-2.034 2.373c-.407.475-.475 1.153-.203 1.695.271.542.813.949 1.491 1.085l3.389.678c.407.068.678.407.678.814 0 .407-.271.746-.678.814l-3.389.678c-.678.136-1.22.542-1.491 1.085-.271.542-.203 1.22.203 1.695l2.034 2.373c.271.339.678.542 1.085.542.407 0 .814-.203 1.085-.542l2.034-2.373c.407-.475.475-1.153.203-1.695z"/>
+              </svg>
+            </a>
+          </div>
           </div>
         </div>
         <div className="border-t border-red-800 mt-8 pt-6 text-center">
