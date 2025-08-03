@@ -360,6 +360,81 @@ html {
   box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
+/* Premium Menu Header Styles */
+.premium-menu-title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menu-glow-text {
+  position: relative;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FEF3C7 50%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+}
+
+.premium-menu-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Header Animation */
+.menu-header-animation {
+  animation: menuFadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes menuFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for decorative elements */
+.menu-header-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.menu-header-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.menu-header-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.menu-header-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.menu-header-animation > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Mobile optimizations for menu header */
+@media (max-width: 768px) {
+  .premium-menu-title {
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .premium-menu-subtitle {
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+  
+  .menu-glow-text {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+  }
+}
+
+/* Enhanced glow effect on hover for desktop */
+@media (min-width: 769px) {
+  .menu-glow-text:hover {
+    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
+    transition: filter 0.3s ease;
+  }
+}
+
 /* Focus styles for accessibility */
 .focus-ring:focus {
   outline: 2px solid #FFD700;
