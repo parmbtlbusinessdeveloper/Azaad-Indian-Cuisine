@@ -154,14 +154,36 @@ export const HomePage: React.FC = () => {
             {/* Text Content - Centered on Mobile */}
             <div className="text-white text-center space-y-6 elegant-fade-in px-4">
               <div className="space-y-4">
-                <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
-                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                    Authentic Indian
-                  </span>
-                  <span className="block text-white mt-2">
-                    Cuisine
-                  </span>
-                </h1>
+                <div className="flex items-center justify-center space-x-4">
+                  {/* Left wheat icon */}
+                  <div className="text-white opacity-60">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <path d="M12 2L10 8L12 14L14 8L12 2Z" opacity="0.8"/>
+                      <path d="M8 4L10 8L8 12L6 8L8 4Z" opacity="0.6"/>
+                      <path d="M16 4L18 8L16 12L14 8L16 4Z" opacity="0.6"/>
+                      <path d="M12 14L12 22" strokeWidth="1" stroke="currentColor"/>
+                    </svg>
+                  </div>
+                  
+                  <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
+                    <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
+                      Authentic Indian
+                    </span>
+                    <span className="block text-white mt-2">
+                      Cuisine
+                    </span>
+                  </h1>
+                  
+                  {/* Right wheat icon */}
+                  <div className="text-white opacity-60">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <path d="M12 2L10 8L12 14L14 8L12 2Z" opacity="0.8"/>
+                      <path d="M8 4L10 8L8 12L6 8L8 4Z" opacity="0.6"/>
+                      <path d="M16 4L18 8L16 12L14 8L16 4Z" opacity="0.6"/>
+                      <path d="M12 14L12 22" strokeWidth="1" stroke="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
                 
                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mb-4"></div>
                 
