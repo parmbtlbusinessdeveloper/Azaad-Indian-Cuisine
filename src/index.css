@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FFD700, #FF6B35, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Punjabi pattern overlay */
+.punjabi-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255, 107, 53, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom button hover effects */
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Traditional border pattern */
+.traditional-border {
+  border-image: linear-gradient(45deg, #FFD700, #FF6B35, #C41E3A, #FFD700) 1;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  .text-responsive-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .text-responsive-4xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 4.5rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
