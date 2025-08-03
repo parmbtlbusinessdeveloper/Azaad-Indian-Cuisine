@@ -348,8 +348,6 @@ html {
 /* Text Logo Styles */
 .text-logo-container {
   font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
 }
 
 .text-logo-main {
@@ -357,26 +355,13 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .text-logo-sub {
   color: #FCD34D;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   font-family: 'Cormorant Garamond', serif;
 }
 
-.text-logo-container:hover {
-  transform: translateY(-2px);
-}
-
-.text-logo-container:hover .text-logo-main {
-  filter: drop-shadow(0 3px 8px rgba(255, 215, 0, 0.4));
-}
-
-.text-logo-container:hover .text-logo-sub {
-  color: #FBBF24;
-}
 
 /* Enhanced mobile responsive adjustments for text logo */
 @media (max-width: 640px) {

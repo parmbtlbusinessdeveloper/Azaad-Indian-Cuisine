@@ -25,21 +25,21 @@ export const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-red-900/95 shadow-2xl backdrop-blur-md border-b border-yellow-400/20' 
-        : 'bg-red-900/90 backdrop-blur-sm shadow-lg'
+        ? 'bg-red-900 shadow-lg' 
+        : 'bg-red-900'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-18 py-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-3">
             {/* Elegant Lotus SVG Icon */}
             <svg 
               width="36" 
               height="36" 
               viewBox="0 0 100 100" 
-              className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
+              className="flex-shrink-0"
             >
               <defs>
                 <linearGradient id="lotusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -48,17 +48,10 @@ export const Navigation: React.FC = () => {
                   <stop offset="70%" stopColor="#F59E0B" stopOpacity="0.9" />
                   <stop offset="100%" stopColor="#D97706" stopOpacity="0.95" />
                 </linearGradient>
-                <filter id="lotusGlow">
-                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                  <feMerge> 
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
               </defs>
               
               {/* Lotus Petals */}
-              <g fill="url(#lotusGradient)" stroke="rgba(255, 255, 255, 0.4)" strokeWidth="0.8" filter="url(#lotusGlow)">
+              <g fill="url(#lotusGradient)" stroke="rgba(255, 255, 255, 0.4)" strokeWidth="0.8">
                 {/* Center petal */}
                 <path d="M50 20 C44 32, 44 44, 50 58 C56 44, 56 32, 50 20 Z" />
                 
@@ -76,14 +69,14 @@ export const Navigation: React.FC = () => {
               </g>
               
               {/* Center dot */}
-              <circle cx="50" cy="50" r="4" fill="rgba(255, 255, 255, 0.9)" stroke="rgba(255, 215, 0, 0.6)" strokeWidth="1" />
+              <circle cx="50" cy="50" r="4" fill="rgba(255, 255, 255, 0.9)" />
             </svg>
             
-            <div className="text-logo-container elegant-fade-in transition-all duration-300">
+            <div className="text-logo-container">
               <div className="text-logo-main font-bold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide leading-tight">
                 Azaad Indian Cuisine
               </div>
-              <div className="text-logo-sub text-xs sm:text-sm font-light italic tracking-wider leading-none mt-0.5 transition-colors duration-300 group-hover:text-yellow-200">
+              <div className="text-logo-sub text-xs sm:text-sm font-light italic tracking-wider leading-none mt-0.5">
                 Discover the Taste of India
               </div>
             </div>
@@ -115,7 +108,7 @@ export const Navigation: React.FC = () => {
               href="https://www.toasttab.com/azaad-indian-cuisine"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+              className="ml-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 flex items-center space-x-2"
             >
               <Phone size={16} />
               <span>Order Now</span>
@@ -124,7 +117,7 @@ export const Navigation: React.FC = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300 relative group"
+            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300 relative"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -138,7 +131,7 @@ export const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900/98 backdrop-blur-md border-t border-yellow-400/20 shadow-2xl transition-all duration-500 overflow-hidden ${
+        <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900 shadow-lg transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="px-4 py-6 space-y-2 bg-red-900">
@@ -146,10 +139,10 @@ export const Navigation: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-4 py-3 font-medium text-base tracking-wide rounded-lg transition-all duration-300 transform ${
+                className={`block px-4 py-3 font-medium text-base tracking-wide rounded-lg transition-all duration-300 ${
                   location.pathname === link.path 
-                    ? 'text-yellow-300 bg-white/20 translate-x-2' 
-                    : 'text-white hover:text-yellow-300 hover:bg-white/15 hover:translate-x-2'
+                    ? 'text-yellow-300 bg-white/20' 
+                    : 'text-white hover:text-yellow-300 hover:bg-white/15'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -163,12 +156,12 @@ export const Navigation: React.FC = () => {
             ))}
             
             {/* Mobile Order Button */}
-            <div className="pt-4 border-t border-white/20">
+            <div className="pt-4">
               <a
                 href="https://www.toasttab.com/azaad-indian-cuisine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-4 rounded-lg font-bold text-center transition-all duration-300 shadow-lg"
+                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-4 rounded-lg font-bold text-center transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center justify-center space-x-2">
