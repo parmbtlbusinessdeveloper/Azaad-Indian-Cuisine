@@ -394,6 +394,7 @@ export const Footer: React.FC = () => {
             </a>
           </div>
           </div>
+        </div>
         <div className="border-t border-red-800 mt-8 pt-6 text-center">
           <p className="premium-body text-xs text-gray-500">
             &copy; 2025 Backhouse BTL UX Designs. All rights reserved.
