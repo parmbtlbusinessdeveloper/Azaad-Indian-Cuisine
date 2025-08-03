@@ -56,7 +56,7 @@ export const Navigation: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-white font-medium tracking-wide transition-all duration-300 group ${
+                className={`relative px-4 py-2 text-white font-medium tracking-wide transition-all duration-300 group overflow-hidden ${
                   location.pathname === link.path 
                     ? 'text-yellow-300' 
                     : 'hover:text-yellow-200'
@@ -66,16 +66,16 @@ export const Navigation: React.FC = () => {
                 
                 {/* Active page indicator */}
                 {location.pathname === link.path && (
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
                 )}
                 
                 {/* Hover effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-lg opacity-0 transition-all duration-300 ${
+                <div className={`absolute inset-0 bg-gradient-to-r from-yellow-400/5 to-orange-400/5 rounded-lg opacity-0 transition-all duration-300 ${
                   location.pathname !== link.path ? 'group-hover:opacity-100 group-hover:scale-105' : ''
                 }`}></div>
                 
                 {/* Hover underline */}
-                <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full transition-all duration-300 ${
+                <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full transition-all duration-300 ${
                   location.pathname !== link.path ? 'group-hover:w-full' : ''
                 }`}></div>
               </Link>
