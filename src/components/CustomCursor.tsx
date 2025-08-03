@@ -15,25 +15,31 @@ export const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const trailIdRef = useRef(0);
   const lastTrailTime = useRef(0);
+  const positionHistory = useRef<Array<{ x: number; y: number; timestamp: number }>>([]);
 
   // Create trail orb
-  const createTrailOrb = useCallback((x: number, y: number) => {
+  const createTrailOrb = useCallback(() => {
     const now = Date.now();
-    // Throttle trail creation to every 50ms for smooth performance
-    if (now - lastTrailTime.current < 50) return;
+    // Throttle trail creation to every 80ms for smoother, less distracting effect
+    if (now - lastTrailTime.current < 80) return;
     
     lastTrailTime.current = now;
+    
+    // Get position from 120ms ago for natural delay
+    const delayedPosition = positionHistory.current.find(pos => now - pos.timestamp >= 120);
+    if (!delayedPosition) return;
+    
     const newOrb: TrailOrb = {
       id: trailIdRef.current++,
-      x,
-      y,
+      x: delayedPosition.x,
+      y: delayedPosition.y,
       timestamp: now
     };
 
     setTrailOrbs(prev => {
-      // Keep only recent orbs (last 600ms)
-      const filtered = prev.filter(orb => now - orb.timestamp < 600);
-      return [...filtered, newOrb].slice(-8); // Max 8 orbs
+      // Keep only recent orbs (last 400ms for quicker fade)
+      const filtered = prev.filter(orb => now - orb.timestamp < 400);
+      return [...filtered, newOrb].slice(-6); // Max 6 orbs for cleaner look
     });
   }, []);
 
@@ -45,9 +51,16 @@ export const CustomCursor: React.FC = () => {
     const updateCursorPosition = (e: MouseEvent) => {
       const newX = e.clientX;
       const newY = e.clientY;
+      const now = Date.now();
       
       setPosition({ x: newX, y: newY });
-      createTrailOrb(newX, newY);
+      
+      // Store position history for delayed trail effect
+      positionHistory.current.push({ x: newX, y: newY, timestamp: now });
+      // Keep only last 200ms of history
+      positionHistory.current = positionHistory.current.filter(pos => now - pos.timestamp < 200);
+      
+      createTrailOrb();
     };
 
     const handleMouseEnter = (e: Event) => {
@@ -122,7 +135,7 @@ export const CustomCursor: React.FC = () => {
     // Cleanup old trail orbs periodically
     const cleanupInterval = setInterval(() => {
       const now = Date.now();
-      setTrailOrbs(prev => prev.filter(orb => now - orb.timestamp < 600));
+      setTrailOrbs(prev => prev.filter(orb => now - orb.timestamp < 400));
     }, 100);
 
     // Cleanup

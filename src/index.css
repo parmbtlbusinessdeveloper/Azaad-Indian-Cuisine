@@ -620,17 +620,17 @@ html {
     left: 0;
     width: 24px;
     height: 24px;
-    background: radial-gradient(circle, #FEF3C7 0%, #FCD34D 30%, #F59E0B 70%, #D97706 100%);
+    background: radial-gradient(circle, rgba(254, 243, 199, 0.7) 0%, rgba(252, 211, 77, 0.65) 30%, rgba(245, 158, 11, 0.6) 70%, rgba(217, 119, 6, 0.7) 100%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 
-      0 0 15px rgba(252, 211, 77, 0.6),
-      0 0 30px rgba(252, 211, 77, 0.4),
-      0 0 45px rgba(252, 211, 77, 0.2),
-      0 0 60px rgba(252, 211, 77, 0.1);
+      0 0 15px rgba(252, 211, 77, 0.4),
+      0 0 30px rgba(252, 211, 77, 0.25),
+      0 0 45px rgba(252, 211, 77, 0.15),
+      0 0 60px rgba(252, 211, 77, 0.08);
     will-change: transform, width, height, box-shadow;
   }
   
@@ -638,12 +638,12 @@ html {
   .custom-cursor.hover {
     width: 32px;
     height: 32px;
-    background: radial-gradient(circle, #FEF3C7 0%, #FCD34D 30%, #F59E0B 70%, #D97706 100%);
+    background: radial-gradient(circle, rgba(254, 243, 199, 0.9) 0%, rgba(252, 211, 77, 0.85) 30%, rgba(245, 158, 11, 0.8) 70%, rgba(217, 119, 6, 0.9) 100%);
     box-shadow: 
-      0 0 20px rgba(252, 211, 77, 0.8),
-      0 0 40px rgba(252, 211, 77, 0.6),
-      0 0 60px rgba(252, 211, 77, 0.4),
-      0 0 80px rgba(252, 211, 77, 0.2);
+      0 0 20px rgba(252, 211, 77, 0.7),
+      0 0 40px rgba(252, 211, 77, 0.5),
+      0 0 60px rgba(252, 211, 77, 0.3),
+      0 0 80px rgba(252, 211, 77, 0.15);
     animation: cursor-pulse 1.5s ease-in-out infinite;
   }
   
@@ -651,17 +651,17 @@ html {
   @keyframes cursor-pulse {
     0%, 100% {
       box-shadow: 
-        0 0 20px rgba(252, 211, 77, 0.8),
-        0 0 40px rgba(252, 211, 77, 0.6),
-        0 0 60px rgba(252, 211, 77, 0.4),
-        0 0 80px rgba(252, 211, 77, 0.2);
+        0 0 20px rgba(252, 211, 77, 0.7),
+        0 0 40px rgba(252, 211, 77, 0.5),
+        0 0 60px rgba(252, 211, 77, 0.3),
+        0 0 80px rgba(252, 211, 77, 0.15);
     }
     50% {
       box-shadow: 
-        0 0 25px rgba(252, 211, 77, 1),
-        0 0 50px rgba(252, 211, 77, 0.8),
-        0 0 75px rgba(252, 211, 77, 0.6),
-        0 0 100px rgba(252, 211, 77, 0.3);
+        0 0 25px rgba(252, 211, 77, 0.9),
+        0 0 50px rgba(252, 211, 77, 0.7),
+        0 0 75px rgba(252, 211, 77, 0.4),
+        0 0 100px rgba(252, 211, 77, 0.2);
     }
   }
   
@@ -669,11 +669,11 @@ html {
   .custom-cursor.click {
     width: 18px;
     height: 18px;
-    background: radial-gradient(circle, #FFFFFF 0%, #FCD34D 50%, #F59E0B 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(252, 211, 77, 0.8) 50%, rgba(245, 158, 11, 0.7) 100%);
     box-shadow: 
-      0 0 12px rgba(252, 211, 77, 1),
-      0 0 24px rgba(252, 211, 77, 0.8),
-      0 0 36px rgba(252, 211, 77, 0.6);
+      0 0 12px rgba(252, 211, 77, 0.8),
+      0 0 24px rgba(252, 211, 77, 0.6),
+      0 0 36px rgba(252, 211, 77, 0.4);
   }
   
   /* Cursor trail orbs */
@@ -683,7 +683,7 @@ html {
     left: 0;
     width: 8px;
     height: 8px;
-    background: radial-gradient(circle, #FCD34D 0%, #F59E0B 70%, transparent 100%);
+    background: radial-gradient(circle, rgba(252, 211, 77, 0.6) 0%, rgba(245, 158, 11, 0.4) 70%, transparent 100%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998;
@@ -693,12 +693,12 @@ html {
   
   /* Trail fade animation */
   .cursor-trail.fade {
-    animation: trailFade 0.6s ease-out forwards;
+    animation: trailFade 0.4s ease-out forwards;
   }
   
   @keyframes trailFade {
     0% {
-      opacity: 0.8;
+      opacity: 0.6;
       transform: translate(-50%, -50%) scale(1);
     }
     100% {
