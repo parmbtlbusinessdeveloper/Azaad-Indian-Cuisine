@@ -125,27 +125,3 @@ html {
     );
   background-size: 30px 30px, 30px 30px, 15px 15px, 60px 60px;
 }
-
-/* Fire emoji animation for mobile */
-@keyframes fireFlicker {
-  0%, 100% { 
-    opacity: 0.8; 
-    transform: scale(1) rotate(-2deg);
-  }
-  25% { 
-    opacity: 1; 
-    transform: scale(1.1) rotate(1deg);
-  }
-  50% { 
-    opacity: 0.9; 
-    transform: scale(1.05) rotate(-1deg);
-  }
-  75% { 
-    opacity: 1; 
-    transform: scale(1.08) rotate(2deg);
-  }
-}
-
-.fire-flicker {
-  animation: fireFlicker 2s ease-in-out infinite;
-}
