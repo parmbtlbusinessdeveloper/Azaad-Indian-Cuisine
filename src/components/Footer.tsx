@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
               setSparkles(newSparkles);
               
               // Clean up after animation completes
-              const cleanupTime = 6500;
+              const cleanupTime = 7500;
               setTimeout(() => {
                 setShowSparkles(false);
                 setSparkles([]);
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
                 left: `${sparkle.x}%`,
                 top: '-20px',
                 animationDelay: `${sparkle.delay}s`,
-                animationDuration: `${sparkle.duration}s`
+                animationDuration: `${sparkle.duration + 0.5}s`
               }}
             >
               {/* Main sparkle */}

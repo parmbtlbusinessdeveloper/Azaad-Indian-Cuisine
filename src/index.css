@@ -509,11 +509,11 @@ html {
   }
   90% {
     opacity: 1;
-    transform: translateY(300px) scale(0.8) rotate(315deg);
+    transform: translateY(500px) scale(0.8) rotate(315deg);
   }
   100% {
     opacity: 0;
-    transform: translateY(350px) scale(0) rotate(360deg);
+    transform: translateY(550px) scale(0) rotate(360deg);
   }
 }
 
