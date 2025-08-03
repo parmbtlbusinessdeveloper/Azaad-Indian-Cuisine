@@ -401,10 +401,10 @@ export const MenuPage: React.FC = () => {
               <button
                 key={sectionIds[index]}
                 onClick={() => handleSectionChange(sectionIds[index])}
-                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
+                className={`whitespace-nowrap px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg border-2 ${
                   activeSection === sectionIds[index]
-                    ? 'bg-red-900 text-white'
-                    : 'text-red-900 hover:bg-red-100'
+                    ? 'bg-gradient-to-r from-red-900 to-red-800 text-white border-red-700 shadow-lg'
+                    : 'text-red-900 hover:bg-gradient-to-r hover:from-red-50 hover:to-orange-50 border-red-200 hover:border-red-400'
                 }`}
               >
                 {section.title}
@@ -427,7 +427,7 @@ export const MenuPage: React.FC = () => {
                     }
                   }
                 }}
-                className="w-full appearance-none bg-white border-2 border-red-900 rounded-lg px-4 py-3 pr-10 text-red-900 font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200"
+                className="w-full appearance-none bg-gradient-to-r from-white to-amber-50 border-2 border-red-900 rounded-xl px-4 py-3 pr-10 text-red-900 font-semibold focus:outline-none focus:ring-4 focus:ring-red-300 focus:border-red-600 transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <option value="all">View Complete Menu</option>
                 {menuSections.map((section, index) => (
@@ -458,37 +458,50 @@ export const MenuPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {section.items.map((item) => (
-                <div key={item.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-yellow-200">
+                <div key={item.id} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-yellow-200/50 hover:border-yellow-400/70 transform hover:-translate-y-1 premium-card">
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center space-x-3">
-                        <span className="text-3xl filter drop-shadow-sm">{item.emoji}</span>
+                        <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-md">
+                          <span className="text-3xl filter drop-shadow-sm">{item.emoji}</span>
+                        </div>
                         <h3 className="elegant-header text-2xl font-bold text-red-900 leading-tight">{item.name}</h3>
                       </div>
                       <div className="flex flex-col items-end">
-                        <span className="refined-subheader text-2xl font-bold text-orange-600 tracking-wide">{item.price}</span>
+                        <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full shadow-md">
+                          <span className="refined-subheader text-xl font-bold tracking-wide">{item.price}</span>
+                        </div>
                         <div className="flex space-x-1 mt-1">
                           {item.isVegetarian && (
-                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Vegetarian</span>
+                            <span className="premium-body text-xs bg-gradient-to-r from-green-100 to-green-200 text-green-800 px-3 py-1 rounded-full font-medium border border-green-300 shadow-sm">🌱 Veg</span>
                           )}
                           {item.isSpicy && (
-                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
+                            <span className="premium-body text-xs bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-3 py-1 rounded-full font-medium border border-red-300 shadow-sm">🌶️ Spicy</span>
                           )}
                         </div>
                       </div>
                     </div>
-                    <p className="premium-body text-gray-700 mb-4 leading-relaxed text-base font-light">{item.description}</p>
+                    <p className="premium-body text-gray-700 mb-6 leading-relaxed text-base font-light">{item.description}</p>
                     
                     {/* Image Placeholder */}
-                    <div className="w-full h-24 bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="premium-body text-gray-500 text-sm font-medium">Photo Coming Soon</span>
+                    <div className="w-full h-32 bg-gradient-to-br from-amber-100 via-orange-100 to-yellow-100 rounded-xl mb-6 flex items-center justify-center border-2 border-yellow-200/50 shadow-inner">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full mx-auto mb-2 flex items-center justify-center shadow-md">
+                          <span className="text-2xl">📸</span>
+                        </div>
+                        <span className="premium-body text-gray-600 text-sm font-medium">Photo Coming Soon</span>
+                      </div>
                     </div>
                     
                     <button 
                       onClick={() => setIsOrderModalOpen(true)}
-                      className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-3 px-4 rounded-lg premium-body font-bold text-base hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+                      className="w-full bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white py-4 px-6 rounded-xl premium-body font-bold text-lg hover:from-red-800 hover:via-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl border border-red-700 relative overflow-hidden group"
                     >
-                      Order Now
+                      <span className="relative z-10 flex items-center justify-center space-x-2">
+                        <span>🛒</span>
+                        <span>Order Now</span>
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
                   </div>
                 </div>
@@ -502,10 +515,10 @@ export const MenuPage: React.FC = () => {
       <div className="hidden lg:block text-center pb-12">
         <button
           onClick={handleCompleteMenuToggle}
-          className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
+          className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl border-2 ${
             activeSection === 'all'
-              ? 'bg-red-900 text-white'
-              : 'border-2 border-red-900 text-red-900 hover:bg-red-900 hover:text-white'
+              ? 'bg-gradient-to-r from-red-900 to-red-800 text-white border-red-700'
+              : 'border-red-900 text-red-900 hover:bg-gradient-to-r hover:from-red-900 hover:to-red-800 hover:text-white bg-white hover:border-red-700'
           }`}
         >
           {activeSection === 'all' ? 'Back to Categories' : 'View Complete Menu'}
@@ -522,30 +535,35 @@ export const MenuPage: React.FC = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {section.items.map((item) => (
-                  <div key={`all-${item.id}`} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-yellow-200">
+                  <div key={`all-${item.id}`} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-yellow-200/50 hover:border-yellow-400/70 transform hover:-translate-y-1 premium-card">
                     <div className="p-4">
                       <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center space-x-2">
-                          <span className="text-2xl filter drop-shadow-sm">{item.emoji}</span>
+                          <div className="w-10 h-10 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                            <span className="text-xl filter drop-shadow-sm">{item.emoji}</span>
+                          </div>
                           <h3 className="elegant-header text-lg font-bold text-red-900 leading-tight">{item.name}</h3>
                         </div>
-                        <span className="refined-subheader text-lg font-bold text-orange-600 tracking-wide">{item.price}</span>
+                        <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 rounded-full shadow-sm">
+                          <span className="refined-subheader text-sm font-bold tracking-wide">{item.price}</span>
+                        </div>
                       </div>
                       <p className="premium-body text-gray-700 text-sm mb-3 leading-relaxed font-light">{item.description}</p>
                       <div className="flex justify-between items-center">
                         <div className="flex space-x-1">
                           {item.isVegetarian && (
-                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Veg</span>
+                            <span className="premium-body text-xs bg-gradient-to-r from-green-100 to-green-200 text-green-800 px-2 py-1 rounded-full font-medium border border-green-300 shadow-sm">🌱</span>
                           )}
                           {item.isSpicy && (
-                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
+                            <span className="premium-body text-xs bg-gradient-to-r from-red-100 to-red-200 text-red-800 px-2 py-1 rounded-full font-medium border border-red-300 shadow-sm">🌶️</span>
                           )}
                         </div>
                         <button 
                           onClick={() => setIsOrderModalOpen(true)}
-                          className="bg-red-900 text-white py-2 px-4 rounded premium-body text-sm font-bold hover:bg-red-800 transition-colors duration-200 shadow-sm hover:shadow-md"
+                          className="bg-gradient-to-r from-red-900 to-red-800 text-white py-2 px-4 rounded-lg premium-body text-sm font-bold hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg border border-red-700 relative overflow-hidden group"
                         >
-                          Order
+                          <span className="relative z-10">🛒 Order</span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                         </button>
                       </div>
                     </div>
