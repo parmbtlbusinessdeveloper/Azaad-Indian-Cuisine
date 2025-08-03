@@ -393,7 +393,7 @@ export const MenuPage: React.FC = () => {
       </section>
 
       {/* Menu Navigation */}
-      <div className="bg-white/95 backdrop-blur-sm border-b border-amber-200/50 sticky top-16 z-40 shadow-sm">
+      <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden md:flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
@@ -401,10 +401,10 @@ export const MenuPage: React.FC = () => {
               <button
                 key={sectionIds[index]}
                 onClick={() => handleSectionChange(sectionIds[index])}
-                className={`menu-nav-button whitespace-nowrap px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                   activeSection === sectionIds[index]
-                    ? 'active'
-                    : ''
+                    ? 'bg-red-900 text-white'
+                    : 'text-red-900 hover:bg-red-100'
                 }`}
               >
                 {section.title}
@@ -427,7 +427,7 @@ export const MenuPage: React.FC = () => {
                     }
                   }
                 }}
-                className="w-full appearance-none bg-white/95 backdrop-blur-sm border-2 border-amber-700/30 rounded-lg px-4 py-3 pr-10 text-amber-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 menu-nav-button"
+                className="w-full appearance-none bg-white border-2 border-red-900 rounded-lg px-4 py-3 pr-10 text-red-900 font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200"
               >
                 <option value="all">View Complete Menu</option>
                 {menuSections.map((section, index) => (
@@ -438,7 +438,7 @@ export const MenuPage: React.FC = () => {
               </select>
               {/* Custom dropdown arrow */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <ChevronDown className="h-5 w-5 text-amber-900" />
+                <ChevronDown className="h-5 w-5 text-red-900" />
               </div>
             </div>
           </div>
@@ -446,51 +446,47 @@ export const MenuPage: React.FC = () => {
       </div>
 
       {/* Menu Sections */}
-      <div className="menu-section-bg min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {menuSections.map((section, index) => (
           <section 
             key={sectionIds[index]}
             id={sectionIds[index]}
-            className={`mb-20 ${activeSection !== sectionIds[index] ? 'hidden' : ''}`}
+            className={`mb-16 ${activeSection !== sectionIds[index] ? 'hidden' : ''}`}
           >
-            <div className="text-center mb-12">
-              <h2 className="menu-title text-4xl md:text-5xl text-amber-900 mb-4 menu-section-title">
+            <h2 className="elegant-header text-4xl font-bold text-red-900 mb-8 text-center tracking-wide">
               {section.title}
             </h2>
-              <div className="menu-divider w-full max-w-md mx-auto mb-8"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {section.items.map((item) => (
-                <div key={item.id} className="menu-card-elegant rounded-xl overflow-hidden">
-                  <div className="p-8">
+                <div key={item.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-yellow-200">
+                  <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center space-x-3">
-                        <span className="text-4xl filter drop-shadow-sm">{item.emoji}</span>
-                        <h3 className="menu-item-name text-2xl md:text-3xl text-amber-900 leading-tight">{item.name}</h3>
+                        <span className="text-3xl filter drop-shadow-sm">{item.emoji}</span>
+                        <h3 className="elegant-header text-2xl font-bold text-red-900 leading-tight">{item.name}</h3>
                       </div>
                       <div className="flex flex-col items-end">
-                        <span className="menu-price text-2xl md:text-3xl text-amber-700 tracking-wide">{item.price}</span>
+                        <span className="refined-subheader text-2xl font-bold text-orange-600 tracking-wide">{item.price}</span>
                         <div className="flex space-x-1 mt-1">
                           {item.isVegetarian && (
-                            <span className="menu-badge px-3 py-1 rounded-full">Vegetarian</span>
+                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Vegetarian</span>
                           )}
                           {item.isSpicy && (
-                            <span className="menu-badge spicy px-3 py-1 rounded-full">Spicy</span>
+                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
                           )}
                         </div>
                       </div>
                     </div>
-                    <p className="menu-description text-gray-600 mb-6 leading-relaxed text-base">{item.description}</p>
+                    <p className="premium-body text-gray-700 mb-4 leading-relaxed text-base font-light">{item.description}</p>
                     
                     {/* Image Placeholder */}
-                    <div className="menu-item-image w-full h-32 rounded-lg mb-6 flex items-center justify-center">
-                      <span className="menu-description text-gray-500 text-sm font-medium">Photo Coming Soon</span>
+                    <div className="w-full h-24 bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg mb-4 flex items-center justify-center">
+                      <span className="premium-body text-gray-500 text-sm font-medium">Photo Coming Soon</span>
                     </div>
                     
                     <button 
                       onClick={() => setIsOrderModalOpen(true)}
-                      className="menu-order-button w-full text-white py-4 px-6 rounded-lg text-base"
+                      className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-3 px-4 rounded-lg premium-body font-bold text-base hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                     >
                       Order Now
                     </button>
@@ -500,17 +496,16 @@ export const MenuPage: React.FC = () => {
             </div>
           </section>
         ))}
-        </div>
       </div>
 
       {/* Show All Sections Button */}
       <div className="hidden lg:block text-center pb-12">
         <button
           onClick={handleCompleteMenuToggle}
-          className={`menu-nav-button px-8 py-4 rounded-lg font-semibold transition-all duration-300 ${
+          className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
             activeSection === 'all'
-              ? 'active'
-              : ''
+              ? 'bg-red-900 text-white'
+              : 'border-2 border-red-900 text-red-900 hover:bg-red-900 hover:text-white'
           }`}
         >
           {activeSection === 'all' ? 'Back to Categories' : 'View Complete Menu'}
@@ -519,40 +514,36 @@ export const MenuPage: React.FC = () => {
 
       {/* All Sections View */}
       {activeSection === 'all' && (
-        <div className="menu-section-bg">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           {menuSections.map((section, index) => (
-            <section key={`all-${sectionIds[index]}`} className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="menu-title text-3xl md:text-4xl text-amber-900 mb-4 menu-section-title">
+            <section key={`all-${sectionIds[index]}`} className="mb-16">
+              <h2 className="elegant-header text-4xl font-bold text-red-900 mb-8 text-center border-b-2 border-yellow-400 pb-4 tracking-wide">
                 {section.title}
               </h2>
-                <div className="menu-divider w-full max-w-sm mx-auto mb-8"></div>
-              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {section.items.map((item) => (
-                  <div key={`all-${item.id}`} className="menu-card-elegant rounded-xl overflow-hidden">
-                    <div className="p-6">
+                  <div key={`all-${item.id}`} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-yellow-200">
+                    <div className="p-4">
                       <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center space-x-2">
-                          <span className="text-3xl filter drop-shadow-sm">{item.emoji}</span>
-                          <h3 className="menu-item-name text-lg md:text-xl text-amber-900 leading-tight">{item.name}</h3>
+                          <span className="text-2xl filter drop-shadow-sm">{item.emoji}</span>
+                          <h3 className="elegant-header text-lg font-bold text-red-900 leading-tight">{item.name}</h3>
                         </div>
-                        <span className="menu-price text-lg md:text-xl text-amber-700 tracking-wide">{item.price}</span>
+                        <span className="refined-subheader text-lg font-bold text-orange-600 tracking-wide">{item.price}</span>
                       </div>
-                      <p className="menu-description text-gray-600 text-sm mb-4 leading-relaxed">{item.description}</p>
+                      <p className="premium-body text-gray-700 text-sm mb-3 leading-relaxed font-light">{item.description}</p>
                       <div className="flex justify-between items-center">
                         <div className="flex space-x-1">
                           {item.isVegetarian && (
-                            <span className="menu-badge text-xs px-2 py-1 rounded-full">Veg</span>
+                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Veg</span>
                           )}
                           {item.isSpicy && (
-                            <span className="menu-badge spicy text-xs px-2 py-1 rounded-full">Spicy</span>
+                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
                           )}
                         </div>
                         <button 
                           onClick={() => setIsOrderModalOpen(true)}
-                          className="menu-order-button text-white py-2 px-4 rounded-lg text-sm"
+                          className="bg-red-900 text-white py-2 px-4 rounded premium-body text-sm font-bold hover:bg-red-800 transition-colors duration-200 shadow-sm hover:shadow-md"
                         >
                           Order
                         </button>
@@ -563,7 +554,6 @@ export const MenuPage: React.FC = () => {
               </div>
             </section>
           ))}
-          </div>
         </div>
       )}
     </div>
