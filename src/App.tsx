@@ -42,33 +42,32 @@ const CustomCursor: React.FC = () => {
       });
     };
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target;
-      if (!target || !cursorRef.current) return;
-      
-      // Remove all cursor classes first
-      cursorRef.current.classList.remove('cursor-hover', 'cursor-text');
-      
-      // Check if target is an Element and has the matches method
-      if (target instanceof Element && typeof target.matches === 'function') {
-        if (target.matches('a, button, input, textarea, select, [role="button"], .premium-button, .btn-hover')) {
-          cursorRef.current.classList.add('cursor-hover');
-        } else if (target.matches('p, h1, h2, h3, h4, h5, h6, span, div, li')) {
-          cursorRef.current.classList.add('cursor-text');
-        }
+    const handleMouseEnter = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target instanceof Element && target.matches('a, button, input, textarea, select, [role="button"]')) {
+        cursorRef.current?.classList.add('cursor-hover');
       }
+      if (target instanceof Element && target.matches('p, h1, h2, h3, h4, h5, h6, span, div')) {
+        cursorRef.current?.classList.add('cursor-text');
+      }
+    };
+
+    const handleMouseLeave = () => {
+      cursorRef.current?.classList.remove('cursor-hover', 'cursor-text');
     };
 
     // Event listeners
     document.addEventListener('mousemove', updateCursor);
-    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseenter', handleMouseEnter, true);
+    document.addEventListener('mouseleave', handleMouseLeave, true);
 
     // Trail animation
     const trailInterval = setInterval(updateTrail, 50);
 
     return () => {
       document.removeEventListener('mousemove', updateCursor);
-      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseenter', handleMouseEnter, true);
+      document.removeEventListener('mouseleave', handleMouseLeave, true);
       clearInterval(trailInterval);
     };
   }, []);
