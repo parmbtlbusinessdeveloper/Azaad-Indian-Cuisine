@@ -80,12 +80,52 @@ export const GalleryPage: React.FC = () => {
     <div className="pt-16 min-h-screen bg-amber-50">
       {/* Header */}
       <section className="bg-gradient-to-r from-red-900 to-red-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Gallery</h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mb-6"></div>
-          <p className="text-xl text-yellow-200">
-            A visual journey through our authentic Punjabi cuisine and warm atmosphere
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+          {/* Decorative Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="w-full h-full" style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.3) 2px, transparent 2px),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.3) 2px, transparent 2px),
+                radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.2) 1px, transparent 1px),
+                radial-gradient(circle at 60% 20%, rgba(255, 215, 0, 0.2) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px, 60px 60px, 30px 30px, 30px 30px'
+            }}></div>
+          </div>
+          
+          {/* Ornamental Top Flourish */}
+          <div className="relative z-10 menu-header-animation">
+            <div className="flex justify-center items-center mb-6">
+              <div className="hidden sm:block w-16 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+              <div className="mx-4 text-yellow-400 text-2xl">✦</div>
+              <div className="hidden sm:block w-16 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+            </div>
+            
+            <h1 className="premium-menu-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 relative">
+              <span className="menu-glow-text">Gallery</span>
+            </h1>
+            
+            {/* Decorative Underline */}
+            <div className="flex justify-center items-center mb-8">
+              <div className="w-8 h-px bg-yellow-400 opacity-60"></div>
+              <div className="mx-3 w-32 h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500 rounded-full shadow-lg"></div>
+              <div className="w-8 h-px bg-yellow-400 opacity-60"></div>
+            </div>
+            
+            <p className="premium-menu-subtitle text-xl md:text-2xl lg:text-3xl text-yellow-200 italic font-light leading-relaxed max-w-4xl mx-auto">
+              A visual journey through our authentic Punjabi cuisine and warm atmosphere
+            </p>
+            
+            {/* Ornamental Bottom Flourish */}
+            <div className="flex justify-center items-center mt-8">
+              <div className="text-yellow-400 text-lg opacity-70">❋</div>
+              <div className="mx-6 w-24 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+              <div className="text-yellow-400 text-xl">✧</div>
+              <div className="mx-6 w-24 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+              <div className="text-yellow-400 text-lg opacity-70">❋</div>
+            </div>
+          </div>
         </div>
       </section>
 
