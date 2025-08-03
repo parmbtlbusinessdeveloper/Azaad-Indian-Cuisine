@@ -121,7 +121,16 @@ export const HomePage: React.FC = () => {
           {/* Mobile Layout */}
           <div className="lg:hidden flex flex-col items-center min-h-screen py-12 space-y-8">
             {/* Video Section - Top on Mobile */}
-            <div className="w-full max-w-sm elegant-fade-in">
+            <div className="w-full max-w-sm elegant-fade-in mt-8">
+              {/* Logo above video on mobile */}
+              <div className="flex justify-center mb-6">
+                <img 
+                  src="https://i.imgur.com/13b6Lyj.png" 
+                  alt="Azaad Indian Cuisine" 
+                  className="h-16 w-auto filter drop-shadow-lg"
+                />
+              </div>
+              
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 premium-card">
                   <div className="absolute inset-0 bg-black/40"></div>
