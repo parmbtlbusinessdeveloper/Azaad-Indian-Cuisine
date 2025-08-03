@@ -34,13 +34,11 @@ export const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-red-900 font-bold text-lg">A</span>
-            </div>
-            <div className="text-white">
-              <div className="font-bold text-xl leading-tight">Azaad</div>
-              <div className="text-xs text-yellow-300 font-medium">Indian Cuisine</div>
-            </div>
+            <img 
+              src="https://i.imgur.com/13b6Lyj.png" 
+              alt="Azaad Indian Cuisine" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
