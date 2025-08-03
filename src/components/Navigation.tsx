@@ -95,9 +95,6 @@ export const Navigation: React.FC = () => {
               </a>
             </div>
           </div>
-              Order Now
-            </button>
-          </div>
 
           {/* Mobile menu button */}
           <button
