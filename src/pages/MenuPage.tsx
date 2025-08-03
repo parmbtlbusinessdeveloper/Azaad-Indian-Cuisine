@@ -453,7 +453,7 @@ export const MenuPage: React.FC = () => {
             id={sectionIds[index]}
             className={`mb-16 ${activeSection !== sectionIds[index] ? 'hidden' : ''}`}
           >
-            <h2 className="text-3xl font-bold text-red-900 mb-8 text-center">
+            <h2 className="elegant-header text-4xl font-bold text-red-900 mb-8 text-center tracking-wide">
               {section.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -462,31 +462,31 @@ export const MenuPage: React.FC = () => {
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center space-x-3">
-                        <span className="text-2xl">{item.emoji}</span>
-                        <h3 className="text-xl font-semibold text-red-900">{item.name}</h3>
+                        <span className="text-3xl filter drop-shadow-sm">{item.emoji}</span>
+                        <h3 className="elegant-header text-2xl font-bold text-red-900 leading-tight">{item.name}</h3>
                       </div>
                       <div className="flex flex-col items-end">
-                        <span className="text-xl font-bold text-orange-600">{item.price}</span>
+                        <span className="refined-subheader text-2xl font-bold text-orange-600 tracking-wide">{item.price}</span>
                         <div className="flex space-x-1 mt-1">
                           {item.isVegetarian && (
-                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Vegetarian</span>
+                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Vegetarian</span>
                           )}
                           {item.isSpicy && (
-                            <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Spicy</span>
+                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
                           )}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
+                    <p className="premium-body text-gray-700 mb-4 leading-relaxed text-base font-light">{item.description}</p>
                     
                     {/* Image Placeholder */}
                     <div className="w-full h-24 bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-gray-500 text-sm">Photo Coming Soon</span>
+                      <span className="premium-body text-gray-500 text-sm font-medium">Photo Coming Soon</span>
                     </div>
                     
                     <button 
                       onClick={() => setIsOrderModalOpen(true)}
-                      className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-2 px-4 rounded-lg font-semibold hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-3 px-4 rounded-lg premium-body font-bold text-base hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
                     >
                       Order Now
                     </button>
@@ -517,7 +517,7 @@ export const MenuPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           {menuSections.map((section, index) => (
             <section key={`all-${sectionIds[index]}`} className="mb-16">
-              <h2 className="text-3xl font-bold text-red-900 mb-8 text-center border-b-2 border-yellow-400 pb-4">
+              <h2 className="elegant-header text-4xl font-bold text-red-900 mb-8 text-center border-b-2 border-yellow-400 pb-4 tracking-wide">
                 {section.title}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -526,24 +526,24 @@ export const MenuPage: React.FC = () => {
                     <div className="p-4">
                       <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center space-x-2">
-                          <span className="text-xl">{item.emoji}</span>
-                          <h3 className="text-lg font-semibold text-red-900">{item.name}</h3>
+                          <span className="text-2xl filter drop-shadow-sm">{item.emoji}</span>
+                          <h3 className="elegant-header text-lg font-bold text-red-900 leading-tight">{item.name}</h3>
                         </div>
-                        <span className="text-lg font-bold text-orange-600">{item.price}</span>
+                        <span className="refined-subheader text-lg font-bold text-orange-600 tracking-wide">{item.price}</span>
                       </div>
-                      <p className="text-gray-600 text-sm mb-3 leading-relaxed">{item.description}</p>
+                      <p className="premium-body text-gray-700 text-sm mb-3 leading-relaxed font-light">{item.description}</p>
                       <div className="flex justify-between items-center">
                         <div className="flex space-x-1">
                           {item.isVegetarian && (
-                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Veg</span>
+                            <span className="premium-body text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Veg</span>
                           )}
                           {item.isSpicy && (
-                            <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Spicy</span>
+                            <span className="premium-body text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium">Spicy</span>
                           )}
                         </div>
                         <button 
                           onClick={() => setIsOrderModalOpen(true)}
-                          className="bg-red-900 text-white py-1 px-3 rounded text-sm font-medium hover:bg-red-800 transition-colors duration-200"
+                          className="bg-red-900 text-white py-2 px-4 rounded premium-body text-sm font-bold hover:bg-red-800 transition-colors duration-200 shadow-sm hover:shadow-md"
                         >
                           Order
                         </button>
