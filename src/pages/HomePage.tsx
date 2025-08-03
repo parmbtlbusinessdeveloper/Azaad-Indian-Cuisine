@@ -284,12 +284,14 @@ export const HomePage: React.FC = () => {
                   to="/menu"
                   className="font-sans bg-red-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-800 transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
+                  <span>🍽️</span>
                   <span>Explore Our Menu</span>
                 </Link>
                 <Link 
                   to="/gallery"
                   className="font-sans border-2 border-red-900 text-red-900 px-8 py-4 rounded-lg font-semibold hover:bg-red-900 hover:text-white transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
+                  <span>📸</span>
                   <span>View Gallery</span>
                 </Link>
               </div>
@@ -306,16 +308,6 @@ export const HomePage: React.FC = () => {
                   <p className="font-serif font-bold text-xl text-gray-600 mb-2">Restaurant Ambiance</p>
                   <p className="font-sans text-sm text-gray-500">Coming Soon: Interior Photos</p>
                 </div>
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-xl">✨</span>
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-lg">🌶️</span>
-              </div>
-              <div className="absolute top-1/2 -left-4 w-8 h-8 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-sm">⭐</span>
               </div>
             </div>
           </div>
