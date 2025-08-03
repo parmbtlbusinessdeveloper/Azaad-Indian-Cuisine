@@ -7,28 +7,6 @@ export const HomePage: React.FC = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800">
-        {/* Traditional Punjabi Pattern Overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.3) 2px, transparent 2px),
-              radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.3) 2px, transparent 2px),
-              radial-gradient(circle at 40% 60%, rgba(255, 215, 0, 0.2) 1px, transparent 1px),
-              radial-gradient(circle at 60% 40%, rgba(255, 215, 0, 0.2) 1px, transparent 1px),
-              repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 30px,
-                rgba(255, 215, 0, 0.1) 30px,
-                rgba(255, 215, 0, 0.1) 60px
-              )
-            `,
-            backgroundSize: '40px 40px, 40px 40px, 20px 20px, 20px 20px, 80px 80px'
-          }}></div>
-        </div>
-        
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Layout */}
