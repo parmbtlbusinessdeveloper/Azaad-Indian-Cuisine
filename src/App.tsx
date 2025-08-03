@@ -44,10 +44,10 @@ const CustomCursor: React.FC = () => {
 
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.matches('a, button, input, textarea, select, [role="button"]')) {
+      if (target instanceof Element && target.matches('a, button, input, textarea, select, [role="button"]')) {
         cursorRef.current?.classList.add('cursor-hover');
       }
-      if (target.matches('p, h1, h2, h3, h4, h5, h6, span, div')) {
+      if (target instanceof Element && target.matches('p, h1, h2, h3, h4, h5, h6, span, div')) {
         cursorRef.current?.classList.add('cursor-text');
       }
     };
