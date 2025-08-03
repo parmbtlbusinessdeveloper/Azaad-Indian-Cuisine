@@ -22,12 +22,8 @@ export const HomePage: React.FC = () => {
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="mb-4 flex justify-center">
-              <img 
-                src="/2025-07-25 - Edited.png" 
-                alt="Azaad Indian Cuisine" 
-                className="h-24 md:h-32 w-auto"
-              />
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
+              Azaad Indian Cuisine
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-yellow-200 font-medium">
