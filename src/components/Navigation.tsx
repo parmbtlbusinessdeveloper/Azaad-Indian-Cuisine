@@ -34,6 +34,43 @@ export const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
+            {/* Elegant Lotus SVG Icon */}
+            <svg 
+              width="32" 
+              height="32" 
+              viewBox="0 0 100 100" 
+              className="flex-shrink-0"
+            >
+              <defs>
+                <linearGradient id="lotusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FCD34D" stopOpacity="0.9" />
+                  <stop offset="50%" stopColor="#F59E0B" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#D97706" stopOpacity="0.9" />
+                </linearGradient>
+              </defs>
+              
+              {/* Lotus Petals */}
+              <g fill="url(#lotusGradient)" stroke="rgba(255, 255, 255, 0.3)" strokeWidth="0.5">
+                {/* Center petal */}
+                <path d="M50 25 C45 35, 45 45, 50 55 C55 45, 55 35, 50 25 Z" />
+                
+                {/* Left petals */}
+                <path d="M35 35 C30 40, 32 50, 40 55 C45 50, 45 40, 35 35 Z" />
+                <path d="M25 50 C20 52, 22 62, 32 65 C37 60, 35 52, 25 50 Z" />
+                
+                {/* Right petals */}
+                <path d="M65 35 C70 40, 68 50, 60 55 C55 50, 55 40, 65 35 Z" />
+                <path d="M75 50 C80 52, 78 62, 68 65 C63 60, 65 52, 75 50 Z" />
+                
+                {/* Bottom petals */}
+                <path d="M40 60 C35 65, 37 75, 47 75 C50 70, 48 62, 40 60 Z" />
+                <path d="M60 60 C65 65, 63 75, 53 75 C50 70, 52 62, 60 60 Z" />
+              </g>
+              
+              {/* Center dot */}
+              <circle cx="50" cy="50" r="3" fill="rgba(255, 255, 255, 0.8)" />
+            </svg>
+            
             <div className="text-logo-container elegant-fade-in">
               <div className="text-logo-main text-white font-bold text-lg md:text-xl lg:text-2xl tracking-wide leading-tight">
                 Azaad Indian Cuisine
