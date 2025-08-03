@@ -297,7 +297,7 @@ export const HomePage: React.FC = () => {
             </div>
             
             <div className="relative fade-in-right">
-              <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-yellow-400/20 overflow-hidden scale-in">
+              <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-yellow-400/20 overflow-hidden scale-in float">
                 {/* Enhanced placeholder with better styling */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-100/30 to-red-100/30"></div>
                 <div className="text-center text-gray-500">
@@ -308,9 +308,9 @@ export const HomePage: React.FC = () => {
                   <p className="font-sans text-sm text-gray-500 fade-in-up">Coming Soon: Interior Photos</p>
                 </div>
               </div>
-              <div className="absolute top-4 left-4 text-2xl opacity-60 wiggle">🍯</div>
-              <div className="absolute top-8 right-8 text-xl opacity-50 wiggle">🥘</div>
-              <div className="absolute bottom-6 left-8 text-lg opacity-70 wiggle">🧄</div>
+              <div className="absolute top-4 left-4 text-2xl opacity-60 float wiggle">🍯</div>
+              <div className="absolute top-8 right-8 text-xl opacity-50 float wiggle">🥘</div>
+              <div className="absolute bottom-6 left-8 text-lg opacity-70 float wiggle">🧄</div>
             </div>
           </div>
         </div>
