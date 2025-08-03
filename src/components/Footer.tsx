@@ -37,18 +37,18 @@ export const Footer: React.FC = () => {
               
               // Generate sparkles with mobile-optimized count
               const isMobile = window.innerWidth < 768;
-              const sparkleCount = isMobile ? 15 : 22;
+              const sparkleCount = isMobile ? 8 : 22;
               const newSparkles = Array.from({ length: sparkleCount }, (_, i) => ({
                 id: i,
                 x: (i * (100 / sparkleCount) + Math.random() * 6) % 100,
-                delay: Math.random() * (isMobile ? 2 : 2.5),
-                duration: isMobile ? 3 + Math.random() * 1 : 3.5 + Math.random() * 1.5
+                delay: Math.random() * (isMobile ? 1.5 : 2.5),
+                duration: isMobile ? 2 + Math.random() * 0.5 : 3.5 + Math.random() * 1.5
               }));
               
               setSparkles(newSparkles);
               
               // Clean up after animation completes
-              const cleanupTime = isMobile ? 5000 : 6500;
+              const cleanupTime = isMobile ? 3000 : 6500;
               setTimeout(() => {
                 setShowSparkles(false);
                 setSparkles([]);
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
           {sparkles.map((sparkle) => (
             <div
               key={sparkle.id}
-              className="absolute animate-sparkle-fall"
+              className="absolute animate-sparkle-fall pointer-events-none"
               style={{
                 left: `${sparkle.x}%`,
                 top: '-20px',
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
             >
               {/* Main sparkle */}
               <div className="relative">
-                <div className="w-3 h-3 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-full animate-sparkle-twinkle shadow-lg"></div>
+                <div className="w-3 h-3 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-full animate-sparkle-twinkle"></div>
                 {/* Sparkle rays */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-6 h-0.5 bg-gradient-to-r from-transparent via-yellow-300 to-transparent animate-sparkle-rotate"></div>
