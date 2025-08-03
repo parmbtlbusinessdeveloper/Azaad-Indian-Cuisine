@@ -352,7 +352,7 @@ export const HomePage: React.FC = () => {
               rel="noopener noreferrer"
               className="premium-button border-2 border-yellow-300 text-yellow-300 px-12 py-4 rounded-full font-bold text-xl hover:bg-yellow-300 hover:text-red-900 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Directions
+              Location
             </a>
           </div>
         </div>
