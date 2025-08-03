@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
   const [showSparkles, setShowSparkles] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
   const [sparkles, setSparkles] = useState<Array<{ id: number; x: number; delay: number; duration: number }>>([]);
@@ -12,28 +13,34 @@ export const Footer: React.FC = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !showSparkles) {
-            setShowSparkles(true);
-            setAnimationKey(prev => prev + 1);
-            
-            // Generate more sparkles with better distribution
-            const newSparkles = Array.from({ length: 22 }, (_, i) => ({
-              id: i,
-              x: (i * 4.5 + Math.random() * 8) % 100, // More even distribution with slight randomness
-              delay: Math.random() * 2.5, // Slightly longer delay spread
-              duration: 3.5 + Math.random() * 1.5 // Refined duration range
-            }));
-            
-            setSparkles(newSparkles);
-            
-            // Clean up after animation completes
-            setTimeout(() => {
-              setShowSparkles(false);
-              setSparkles([]);
-            }, 6500);
-          } else if (!entry.isIntersecting) {
-            // Reset animation state when footer leaves view
-            if (showSparkles) {
+          if (entry.isIntersecting) {
+            // Footer is now visible
+            if (!isFooterVisible && !showSparkles) {
+              // Trigger animation only if footer wasn't visible before and animation isn't running
+              setIsFooterVisible(true);
+              setShowSparkles(true);
+              setAnimationKey(prev => prev + 1);
+              
+              // Generate sparkles with better distribution
+              const newSparkles = Array.from({ length: 22 }, (_, i) => ({
+                id: i,
+                x: (i * 4.5 + Math.random() * 8) % 100,
+                delay: Math.random() * 2.5,
+                duration: 3.5 + Math.random() * 1.5
+              }));
+              
+              setSparkles(newSparkles);
+              
+              // Clean up after animation completes
+              setTimeout(() => {
+                setShowSparkles(false);
+                setSparkles([]);
+              }, 6500);
+            }
+          } else {
+            // Footer is no longer visible - reset for next visit
+            if (isFooterVisible) {
+              setIsFooterVisible(false);
               setShowSparkles(false);
               setSparkles([]);
             }
@@ -48,7 +55,6 @@ export const Footer: React.FC = () => {
     }
 
     return () => observer.disconnect();
-  }, [showSparkles]);
 
   return (
     <footer ref={footerRef} className="bg-red-900 text-white relative overflow-hidden">
