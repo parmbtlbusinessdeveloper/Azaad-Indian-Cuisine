@@ -44,6 +44,7 @@ export const Footer: React.FC = () => {
     }
 
     return () => observer.disconnect();
+  }, [showSparkles]);
 
   return (
     <footer ref={footerRef} className="bg-red-900 text-white relative overflow-hidden">
