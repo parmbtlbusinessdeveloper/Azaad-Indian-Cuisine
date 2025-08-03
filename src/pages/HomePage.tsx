@@ -118,6 +118,10 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
           
+          {/* Mobile Layout */}
+          <div className="lg:hidden flex flex-col items-center min-h-screen py-12 space-y-8">
+            {/* Video Section - Top on Mobile */}
+            <div className="w-full max-w-sm fade-in">
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20">
                   <div className="absolute inset-0 bg-black/40"></div>
