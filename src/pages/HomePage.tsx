@@ -155,8 +155,20 @@ export const HomePage: React.FC = () => {
             <div className="text-white text-center space-y-6 elegant-fade-in px-4">
               <div className="space-y-4">
                 <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
-                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                    Authentic Indian
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent flex items-center justify-center space-x-3">
+                    {/* Left wheat icon */}
+                    <svg className="w-6 h-6 text-white opacity-70 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L10.5 8.5L4 7L9.5 12L4 17L10.5 15.5L12 22L13.5 15.5L20 17L14.5 12L20 7L13.5 8.5L12 2Z" opacity="0.8"/>
+                      <path d="M12 4L11 9L6 8L10 12L6 16L11 15L12 20L13 15L18 16L14 12L18 8L13 9L12 4Z" opacity="0.6"/>
+                      <path d="M12 6L11.5 10L8 9.5L11 12L8 14.5L11.5 14L12 18L12.5 14L16 14.5L13 12L16 9.5L12.5 10L12 6Z"/>
+                    </svg>
+                    <span>Authentic Indian</span>
+                    {/* Right wheat icon */}
+                    <svg className="w-6 h-6 text-white opacity-70 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L10.5 8.5L4 7L9.5 12L4 17L10.5 15.5L12 22L13.5 15.5L20 17L14.5 12L20 7L13.5 8.5L12 2Z" opacity="0.8"/>
+                      <path d="M12 4L11 9L6 8L10 12L6 16L11 15L12 20L13 15L18 16L14 12L18 8L13 9L12 4Z" opacity="0.6"/>
+                      <path d="M12 6L11.5 10L8 9.5L11 12L8 14.5L11.5 14L12 18L12.5 14L16 14.5L13 12L16 9.5L12.5 10L12 6Z"/>
+                    </svg>
                   </span>
                   <span className="block text-white mt-2">
                     Cuisine
