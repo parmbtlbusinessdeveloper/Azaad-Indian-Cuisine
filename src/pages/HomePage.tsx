@@ -6,7 +6,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800 cultural-pattern-subtle">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800">
         {/* Traditional Punjabi Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="w-full h-full" style={{
