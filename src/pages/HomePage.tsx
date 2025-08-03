@@ -53,9 +53,10 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <p className="font-sans text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl font-light">
-                Experience the rich heritage of Punjab through our carefully crafted dishes, 
-                prepared with traditional spices and techniques passed down through generations.
+              <p className="font-sans text-xl md:text-2xl text-gray-100 leading-relaxed max-w-2xl font-light tracking-wide">
+                Experience the <span className="text-yellow-200 font-medium">rich heritage of Punjab</span> through our carefully crafted dishes, 
+                prepared with <span className="text-orange-200 font-medium">traditional spices</span> and techniques 
+                <span className="text-yellow-200 font-medium italic">passed down through generations</span>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
