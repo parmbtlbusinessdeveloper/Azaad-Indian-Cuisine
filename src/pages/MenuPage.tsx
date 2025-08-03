@@ -315,7 +315,7 @@ export const MenuPage: React.FC = () => {
   const sectionIds = ['appetizers', 'chicken', 'lamb', 'seafood', 'vegetarian', 'biryani', 'breads', 'sides', 'beverages', 'desserts'];
 
   const handleSectionChange = (sectionId: string) => {
-    if (sectionId !== 'all' && activeSection !== 'all') {
+    if (sectionId !== 'all') {
       setPreviousSection(activeSection);
     }
     setActiveSection(sectionId);
@@ -323,8 +323,10 @@ export const MenuPage: React.FC = () => {
 
   const handleCompleteMenuToggle = () => {
     if (activeSection === 'all') {
+      // Going back to previous section
       setActiveSection(previousSection);
     } else {
+      // Going to complete menu view
       setPreviousSection(activeSection);
       setActiveSection('all');
     }
