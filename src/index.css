@@ -97,31 +97,6 @@ html {
   scroll-margin-top: 80px;
 }
 
-/* Fire emoji animation for mobile hero */
-@keyframes fireFlicker {
-  0%, 100% { 
-    transform: scale(1) rotate(-1deg);
-    filter: brightness(1) hue-rotate(0deg);
-  }
-  25% { 
-    transform: scale(1.05) rotate(1deg);
-    filter: brightness(1.1) hue-rotate(5deg);
-  }
-  50% { 
-    transform: scale(0.98) rotate(-0.5deg);
-    filter: brightness(0.95) hue-rotate(-3deg);
-  }
-  75% { 
-    transform: scale(1.02) rotate(0.5deg);
-    filter: brightness(1.05) hue-rotate(2deg);
-  }
-}
-
-.fire-flicker {
-  animation: fireFlicker 2s ease-in-out infinite;
-  display: inline-block;
-}
-
 /* Focus styles for accessibility */
 .focus-ring:focus {
   outline: 2px solid #FFD700;

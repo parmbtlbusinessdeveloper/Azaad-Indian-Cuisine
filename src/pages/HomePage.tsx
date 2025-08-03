@@ -37,10 +37,7 @@ export const HomePage: React.FC = () => {
               <div className="space-y-6">
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-wide">
                   <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                    <span className="inline-flex items-center">
-                      Authentic Indian
-                      <span className="fire-flicker ml-2 md:hidden">🔥</span>
-                    </span>
+                    Authentic Indian
                   </span>
                   <span className="block text-white mt-3">
                     Cuisine
