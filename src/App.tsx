@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/LoadingScreen';
+import { CustomCursor } from './components/CustomCursor';
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { GalleryPage } from './pages/GalleryPage';
@@ -34,6 +35,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-amber-50">
+        <CustomCursor />
         <ScrollToTop />
         <Navigation />
         <main>

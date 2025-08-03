@@ -606,6 +606,87 @@ html {
   }
 }
 /* Enhanced Logo Animation Styles */
+/* Custom Cursor Styles - Desktop Only */
+@media (min-width: 1024px) {
+  /* Hide default cursor */
+  * {
+    cursor: none !important;
+  }
+  
+  /* Custom cursor container */
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #FCD34D 0%, #F59E0B 50%, #D97706 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+      0 0 10px rgba(252, 211, 77, 0.4),
+      0 0 20px rgba(252, 211, 77, 0.2),
+      0 0 30px rgba(252, 211, 77, 0.1);
+    will-change: transform, width, height, box-shadow;
+  }
+  
+  /* Cursor hover state */
+  .custom-cursor.hover {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #FEF3C7 0%, #FCD34D 30%, #F59E0B 70%, #D97706 100%);
+    box-shadow: 
+      0 0 15px rgba(252, 211, 77, 0.6),
+      0 0 30px rgba(252, 211, 77, 0.4),
+      0 0 45px rgba(252, 211, 77, 0.2);
+    animation: cursor-pulse 1.5s ease-in-out infinite;
+  }
+  
+  /* Cursor pulse animation */
+  @keyframes cursor-pulse {
+    0%, 100% {
+      box-shadow: 
+        0 0 15px rgba(252, 211, 77, 0.6),
+        0 0 30px rgba(252, 211, 77, 0.4),
+        0 0 45px rgba(252, 211, 77, 0.2);
+    }
+    50% {
+      box-shadow: 
+        0 0 20px rgba(252, 211, 77, 0.8),
+        0 0 40px rgba(252, 211, 77, 0.6),
+        0 0 60px rgba(252, 211, 77, 0.3);
+    }
+  }
+  
+  /* Cursor click state */
+  .custom-cursor.click {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #FFFFFF 0%, #FCD34D 50%, #F59E0B 100%);
+    box-shadow: 
+      0 0 8px rgba(252, 211, 77, 0.8),
+      0 0 16px rgba(252, 211, 77, 0.6);
+  }
+  
+  /* Ensure clickable elements are properly identified */
+  a, button, input, textarea, select, [role="button"], [tabindex]:not([tabindex="-1"]) {
+    cursor: none !important;
+  }
+}
+
+/* Disable custom cursor on mobile and tablet */
+@media (max-width: 1023px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+}
 .logo-glow {
   filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
   transition: all 0.5s ease-out;
