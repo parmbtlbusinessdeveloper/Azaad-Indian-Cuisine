@@ -330,7 +330,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="premium-section bg-gradient-to-r from-red-900 to-red-800 text-white">
+      <section className="premium-section bg-gradient-to-r from-orange-800 to-red-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 elegant-fade-in">
           <h2 className="elegant-header text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready for an Authentic Punjabi Experience?
