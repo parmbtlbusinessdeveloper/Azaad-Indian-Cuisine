@@ -154,38 +154,31 @@ export const HomePage: React.FC = () => {
             {/* Text Content - Centered on Mobile */}
             <div className="text-white text-center space-y-6 elegant-fade-in px-4">
               <div className="space-y-4">
-                <div className="flex items-center justify-center space-x-4">
-                  {/* Left wheat icon */}
-                  <div className="text-white opacity-60">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                      <path d="M12 2L10 8L12 14L14 8L12 2Z" opacity="0.8"/>
-                      <path d="M8 4L10 8L8 12L6 8L8 4Z" opacity="0.6"/>
-                      <path d="M16 4L18 8L16 12L14 8L16 4Z" opacity="0.6"/>
-                      <path d="M12 14L12 22" strokeWidth="1" stroke="currentColor"/>
+                <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent flex items-center justify-center space-x-3">
+                    {/* Left wheat icon */}
+                    <svg className="w-6 h-6 text-white opacity-70 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L10.5 8.5L4 7L9.5 12L4 17L10.5 15.5L12 22L13.5 15.5L20 17L14.5 12L20 7L13.5 8.5L12 2Z" opacity="0.8"/>
+                      <path d="M12 4L11 9L6 8L10 12L6 16L11 15L12 20L13 15L18 16L14 12L18 8L13 9L12 4Z" opacity="0.6"/>
+                      <path d="M12 6L11.5 10L8 9.5L11 12L8 14.5L11.5 14L12 18L12.5 14L16 14.5L13 12L16 9.5L12.5 10L12 6Z"/>
                     </svg>
-                  </div>
-                  
-                  <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
-                    <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                      Authentic Indian
-                    </span>
-                    <span className="block text-white mt-2">
-                      Cuisine
-                    </span>
-                  </h1>
-                  
-                  {/* Right wheat icon */}
-                  <div className="text-white opacity-60">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                      <path d="M12 2L10 8L12 14L14 8L12 2Z" opacity="0.8"/>
-                      <path d="M8 4L10 8L8 12L6 8L8 4Z" opacity="0.6"/>
-                      <path d="M16 4L18 8L16 12L14 8L16 4Z" opacity="0.6"/>
-                      <path d="M12 14L12 22" strokeWidth="1" stroke="currentColor"/>
+                    <span>Authentic Indian</span>
+                    {/* Right wheat icon */}
+                    <svg className="w-6 h-6 text-white opacity-70 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L10.5 8.5L4 7L9.5 12L4 17L10.5 15.5L12 22L13.5 15.5L20 17L14.5 12L20 7L13.5 8.5L12 2Z" opacity="0.8"/>
+                      <path d="M12 4L11 9L6 8L10 12L6 16L11 15L12 20L13 15L18 16L14 12L18 8L13 9L12 4Z" opacity="0.6"/>
+                      <path d="M12 6L11.5 10L8 9.5L11 12L8 14.5L11.5 14L12 18L12.5 14L16 14.5L13 12L16 9.5L12.5 10L12 6Z"/>
                     </svg>
-                  </div>
-                </div>
+                  </span>
+                  <span className="block text-white mt-2">
+                    Cuisine
+                  </span>
+                </h1>
                 
-                <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mb-4"></div>
+                {/* Glowing animated underline */}
+                <div className="flex justify-center">
+                  <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg animate-pulse"></div>
+                </div>
                 
                 <p className="refined-subheader text-lg sm:text-xl text-yellow-200 font-medium leading-relaxed italic max-w-sm mx-auto">
                   Bold flavors. Warm hospitality.<br />
