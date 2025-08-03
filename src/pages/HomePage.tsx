@@ -222,6 +222,7 @@ export const HomePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Authentic Recipes Card */}
             <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg scale-in btn-animate">
               <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-4 bounce-in float">
                 <Star className="text-yellow-300" size={32} />
@@ -233,6 +234,7 @@ export const HomePage: React.FC = () => {
               </p>
             </div>
 
+            {/* Fresh Daily Card */}
             <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg scale-in btn-animate">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center mx-auto mb-4 bounce-in float">
                 <Clock className="text-white" size={32} />
@@ -244,6 +246,7 @@ export const HomePage: React.FC = () => {
               </p>
             </div>
 
+            {/* Award Winning Card */}
             <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg scale-in btn-animate">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-full flex items-center justify-center mx-auto mb-4 bounce-in float">
                 <Award className="text-white" size={32} />
