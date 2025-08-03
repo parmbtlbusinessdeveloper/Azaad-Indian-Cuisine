@@ -195,7 +195,7 @@ export const GalleryPage: React.FC = () => {
               href="/contact"
               className="border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300"
             >
-              Make Reservation
+              Location
             </a>
           </div>
         </div>
