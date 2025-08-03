@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ChevronDown, ChevronUp, Facebook, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -153,10 +153,34 @@ export const Footer: React.FC = () => {
               passed down through generations. Every dish is prepared with love and 
               the finest spices.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Facebook</a>
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Instagram</a>
-              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300">Yelp</a>
+            <div className="flex items-center space-x-6">
+              <a 
+                href="#" 
+                className="flex items-center space-x-2 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110"
+                aria-label="Visit our Facebook page"
+              >
+                <Facebook size={20} className="fill-current" />
+                <span className="premium-body">Facebook</span>
+              </a>
+              <a 
+                href="#" 
+                className="flex items-center space-x-2 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={20} />
+                <span className="premium-body">Instagram</span>
+              </a>
+              <a 
+                href="#" 
+                className="flex items-center space-x-2 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110"
+                aria-label="Review us on Yelp"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0">
+                  <path d="M12.2 2.4c-.5-.3-1.1-.3-1.6 0L2.4 6.9c-.5.3-.8.8-.8 1.4v7.4c0 .6.3 1.1.8 1.4l8.2 4.5c.5.3 1.1.3 1.6 0l8.2-4.5c.5-.3.8-.8.8-1.4V8.3c0-.6-.3-1.1-.8-1.4L12.2 2.4zM12 4.6l6.9 3.8v7.2L12 19.4l-6.9-3.8V8.4L12 4.6z"/>
+                  <path d="M12 7.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/>
+                </svg>
+                <span className="premium-body">Yelp</span>
+              </a>
             </div>
           </div>
 
@@ -341,9 +365,33 @@ export const Footer: React.FC = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-4">
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Facebook</a>
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Instagram</a>
-            <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 text-sm">Yelp</a>
+            <a 
+              href="#" 
+              className="flex flex-col items-center space-y-1 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110 p-2"
+              aria-label="Visit our Facebook page"
+            >
+              <Facebook size={24} className="fill-current" />
+              <span className="premium-body text-xs">Facebook</span>
+            </a>
+            <a 
+              href="#" 
+              className="flex flex-col items-center space-y-1 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110 p-2"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram size={24} />
+              <span className="premium-body text-xs">Instagram</span>
+            </a>
+            <a 
+              href="#" 
+              className="flex flex-col items-center space-y-1 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110 p-2"
+              aria-label="Review us on Yelp"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0">
+                <path d="M12.2 2.4c-.5-.3-1.1-.3-1.6 0L2.4 6.9c-.5.3-.8.8-.8 1.4v7.4c0 .6.3 1.1.8 1.4l8.2 4.5c.5.3 1.1.3 1.6 0l8.2-4.5c.5-.3.8-.8.8-1.4V8.3c0-.6-.3-1.1-.8-1.4L12.2 2.4zM12 4.6l6.9 3.8v7.2L12 19.4l-6.9-3.8V8.4L12 4.6z"/>
+                <path d="M12 7.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/>
+              </svg>
+              <span className="premium-body text-xs">Yelp</span>
+            </a>
           </div>
         </div>
         <div className="border-t border-red-800 mt-8 pt-6 text-center">
