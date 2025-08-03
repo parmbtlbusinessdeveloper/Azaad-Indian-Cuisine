@@ -5,13 +5,15 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 export const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
   const [showSparkles, setShowSparkles] = useState(false);
+  const [hasTriggered, setHasTriggered] = useState(false);
   const [sparkles, setSparkles] = useState<Array<{ id: number; x: number; delay: number; duration: number }>>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !showSparkles) {
+          if (entry.isIntersecting && !hasTriggered) {
+            setHasTriggered(true);
             setShowSparkles(true);
             
             // Generate sparkles
@@ -40,7 +42,7 @@ export const Footer: React.FC = () => {
     }
 
     return () => observer.disconnect();
-  }, [showSparkles]);
+  }, [hasTriggered]);
 
   return (
     <footer ref={footerRef} className="bg-red-900 text-white relative overflow-hidden">
