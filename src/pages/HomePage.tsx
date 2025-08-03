@@ -228,7 +228,7 @@ export const HomePage: React.FC = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-red-900 mb-3 fade-in-up">Authentic Recipes</h3>
               <p className="font-sans text-gray-600 leading-relaxed fade-in-up">
-                🌶️ Traditional Punjabi recipes handed down through generations, 
+                Traditional Punjabi recipes handed down through generations, 
                 using authentic spices imported directly from India.
               </p>
             </div>
@@ -239,7 +239,7 @@ export const HomePage: React.FC = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-red-900 mb-3 fade-in-up">Fresh Daily</h3>
               <p className="font-sans text-gray-600 leading-relaxed fade-in-up">
-                🥬 All dishes prepared fresh daily with the finest ingredients. 
+                All dishes prepared fresh daily with the finest ingredients. 
                 No preservatives, just pure, wholesome flavors.
               </p>
             </div>
@@ -250,7 +250,7 @@ export const HomePage: React.FC = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-red-900 mb-3 fade-in-up">Award Winning</h3>
               <p className="font-sans text-gray-600 leading-relaxed fade-in-up">
-                🏆 Recognized for excellence in authentic Indian cuisine and 
+                Recognized for excellence in authentic Indian cuisine and 
                 outstanding service in our community.
               </p>
             </div>
@@ -308,6 +308,9 @@ export const HomePage: React.FC = () => {
                   <p className="font-sans text-sm text-gray-500 fade-in-up">Coming Soon: Interior Photos</p>
                 </div>
               </div>
+              <div className="absolute top-4 left-4 text-2xl opacity-60 wiggle">🍯</div>
+              <div className="absolute top-8 right-8 text-xl opacity-50 wiggle">🥘</div>
+              <div className="absolute bottom-6 left-8 text-lg opacity-70 wiggle">🧄</div>
             </div>
           </div>
         </div>
