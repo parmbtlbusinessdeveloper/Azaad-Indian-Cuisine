@@ -154,7 +154,4 @@ html {
   animation: fireFlicker 2s ease-in-out infinite;
   display: inline-block;
   transform-origin: center;
-  font-size: 2rem;
-  margin-left: 0.75rem;
-  vertical-align: middle;
 }
