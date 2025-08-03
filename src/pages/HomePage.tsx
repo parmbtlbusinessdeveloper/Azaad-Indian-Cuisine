@@ -182,10 +182,6 @@ export const HomePage: React.FC = () => {
             
             <p className="font-sans text-lg text-gray-100 leading-relaxed max-w-lg mx-auto font-light tracking-wide">
               Experience the <span className="text-yellow-200 font-medium">rich heritage of Punjab</span> through our carefully crafted dishes, prepared with <span className="text-orange-200 font-medium">traditional spices</span> and techniques <span className="text-yellow-200 font-medium italic">passed down through generations</span>.
-            </p>
-            
-            <div className="flex flex-col gap-4 fade-in">
-              <Link 
                 to="/menu"
                 className="font-sans bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg text-center hover:shadow-yellow-500/25"
               >
