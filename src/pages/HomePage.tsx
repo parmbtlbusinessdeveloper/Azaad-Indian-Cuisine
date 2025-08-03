@@ -341,35 +341,6 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
         </div>
-        
-        {/* 5 Star Reviews Section */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="text-center">
-            <a 
-              href="[PASTE GOOGLE REVIEWS URL HERE]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-white premium-card px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-yellow-200 hover:border-yellow-400 group"
-            >
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">🔍</span>
-                <span className="elegant-header text-2xl md:text-3xl font-bold text-red-900 group-hover:text-red-800 transition-colors duration-300">
-                  5 Star Reviews
-                </span>
-              </div>
-              <div className="flex space-x-1 ml-2">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-500 text-xl group-hover:scale-110 transition-transform duration-300" style={{transitionDelay: `${i * 50}ms`}}>
-                    ⭐
-                  </span>
-                ))}
-              </div>
-            </a>
-            <p className="premium-body text-gray-600 mt-4 text-lg">
-              See what our customers are saying about their dining experience
-            </p>
-          </div>
-        </div>
       </section>
     </div>
   );
