@@ -33,32 +33,28 @@ export const MenuPage: React.FC = () => {
           id: 'samosa',
           name: 'Vegetable Samosa',
           price: '$6.99',
-          description: 'Crispy pastries filled with spiced potatoes, peas, and herbs',
-          emoji: '🥟',
+          description: 'Golden, flaky pastries lovingly filled with aromatic spiced potatoes, garden-fresh peas, and fragrant herbs, deep-fried to perfection',
           isVegetarian: true
         },
         {
           id: 'pakora',
           name: 'Mixed Vegetable Pakora',
           price: '$8.99',
-          description: 'Fresh vegetables dipped in chickpea batter and deep-fried',
-          emoji: '🧄',
+          description: 'Seasonal vegetables delicately coated in our signature spiced chickpea batter and fried until golden and crispy',
           isVegetarian: true
         },
         {
           id: 'chicken_tikka',
           name: 'Chicken Tikka',
           price: '$12.99',
-          description: 'Tender chicken marinated in yogurt and spices, grilled in tandoor',
-          emoji: '🍗',
+          description: 'Succulent pieces of chicken marinated overnight in yogurt and traditional spices, then grilled to smoky perfection in our clay tandoor',
           isSpicy: true
         },
         {
           id: 'seekh_kebab',
           name: 'Seekh Kebab',
           price: '$13.99',
-          description: 'Spiced ground lamb skewers grilled to perfection',
-          emoji: '🍢',
+          description: 'Hand-rolled skewers of premium ground lamb infused with aromatic spices and fresh herbs, charcoal-grilled for an authentic smoky flavor',
           isSpicy: true
         }
       ]
@@ -70,31 +66,27 @@ export const MenuPage: React.FC = () => {
           id: 'butter_chicken',
           name: 'Butter Chicken',
           price: '$16.99',
-          description: 'Tender chicken in creamy tomato-based curry with butter and cream',
-          emoji: '🍛'
+          description: 'Our signature dish featuring tender tandoor-grilled chicken simmered in a velvety tomato-based curry enriched with butter, cream, and aromatic spices'
         },
         {
           id: 'chicken_tikka_masala',
           name: 'Chicken Tikka Masala',
           price: '$17.99',
-          description: 'Grilled chicken in rich, spiced tomato curry sauce',
-          emoji: '🍲',
+          description: 'Charcoal-grilled chicken tikka pieces nestled in a rich, creamy tomato curry sauce with onions, bell peppers, and traditional masala spices',
           isSpicy: true
         },
         {
           id: 'chicken_curry',
           name: 'Traditional Chicken Curry',
           price: '$15.99',
-          description: 'Classic home-style chicken curry with onions, ginger, and spices',
-          emoji: '🍗',
+          description: 'A time-honored family recipe featuring tender chicken slow-cooked with caramelized onions, fresh ginger, garlic, and our secret blend of Punjabi spices',
           isSpicy: true
         },
         {
           id: 'chicken_vindaloo',
           name: 'Chicken Vindaloo',
           price: '$17.99',
-          description: 'Fiery chicken curry with potatoes in tangy, spiced sauce',
-          emoji: '🌶️',
+          description: 'A bold and fiery curry featuring tender chicken and potatoes simmered in a tangy, intensely spiced sauce with vinegar and red chilies',
           isSpicy: true
         }
       ]
@@ -106,23 +98,20 @@ export const MenuPage: React.FC = () => {
           id: 'lamb_curry',
           name: 'Lamb Curry',
           price: '$19.99',
-          description: 'Tender lamb pieces in traditional spiced curry sauce',
-          emoji: '🐑',
+          description: 'Premium cuts of lamb slow-braised until fork-tender in a robust curry sauce infused with traditional Punjabi spices and fresh herbs',
           isSpicy: true
         },
         {
           id: 'lamb_biryani',
           name: 'Lamb Biryani',
           price: '$21.99',
-          description: 'Aromatic basmati rice layered with spiced lamb and herbs',
-          emoji: '🍚'
+          description: 'Fragrant long-grain basmati rice layered with tender spiced lamb, caramelized onions, saffron, and fresh mint, slow-cooked to aromatic perfection'
         },
         {
           id: 'lamb_vindaloo',
           name: 'Lamb Vindaloo',
           price: '$20.99',
-          description: 'Spicy lamb curry with potatoes in tangy sauce',
-          emoji: '🌶️',
+          description: 'Tender lamb and potatoes braised in a fiery, tangy curry sauce with vinegar, red chilies, and aromatic spices for the adventurous palate',
           isSpicy: true
         }
       ]
@@ -134,16 +123,14 @@ export const MenuPage: React.FC = () => {
           id: 'fish_curry',
           name: 'Fish Curry',
           price: '$18.99',
-          description: 'Fresh fish in coconut-based curry with curry leaves',
-          emoji: '🐟',
+          description: 'Fresh catch of the day gently simmered in a fragrant coconut-based curry with curry leaves, mustard seeds, and South Indian spices',
           isSpicy: true
         },
         {
           id: 'shrimp_masala',
           name: 'Shrimp Masala',
           price: '$19.99',
-          description: 'Jumbo shrimp in rich, spiced tomato-onion gravy',
-          emoji: '🦐',
+          description: 'Plump jumbo shrimp sautéed and simmered in a rich, aromatic tomato-onion gravy with bell peppers and traditional masala spices',
           isSpicy: true
         }
       ]
@@ -155,24 +142,21 @@ export const MenuPage: React.FC = () => {
           id: 'dal_makhani',
           name: 'Dal Makhani',
           price: '$13.99',
-          description: 'Creamy black lentils slow-cooked with butter and cream',
-          emoji: '🫘',
+          description: 'Premium black lentils and kidney beans slow-simmered overnight with butter, cream, and aromatic spices for an incredibly rich and creamy texture',
           isVegetarian: true
         },
         {
           id: 'palak_paneer',
           name: 'Palak Paneer',
           price: '$14.99',
-          description: 'Fresh cottage cheese in creamy spinach curry',
-          emoji: '🧀',
+          description: 'Cubes of fresh house-made cottage cheese nestled in a velvety spinach curry enriched with cream, garlic, and traditional spices',
           isVegetarian: true
         },
         {
           id: 'chana_masala',
           name: 'Chana Masala',
           price: '$12.99',
-          description: 'Chickpeas in spiced tomato-onion curry',
-          emoji: '🫛',
+          description: 'Tender chickpeas simmered in a robust tomato-onion curry with ginger, garlic, and a medley of aromatic spices, finished with fresh cilantro',
           isVegetarian: true,
           isSpicy: true
         },
@@ -180,8 +164,7 @@ export const MenuPage: React.FC = () => {
           id: 'aloo_gobi',
           name: 'Aloo Gobi',
           price: '$13.99',
-          description: 'Cauliflower and potatoes with turmeric and spices',
-          emoji: '🥔',
+          description: 'Fresh cauliflower florets and tender potatoes dry-sautéed with turmeric, cumin, coriander, and traditional Punjabi spices',
           isVegetarian: true
         }
       ]
@@ -193,23 +176,20 @@ export const MenuPage: React.FC = () => {
           id: 'chicken_biryani',
           name: 'Chicken Biryani',
           price: '$18.99',
-          description: 'Fragrant basmati rice layered with spiced chicken',
-          emoji: '🍚'
+          description: 'Aromatic long-grain basmati rice layered with marinated chicken, caramelized onions, saffron, and fresh herbs, slow-cooked in a sealed pot'
         },
         {
           id: 'vegetable_biryani',
           name: 'Vegetable Biryani',
           price: '$15.99',
-          description: 'Aromatic rice with mixed vegetables and saffron',
-          emoji: '🥕',
+          description: 'Fragrant basmati rice layered with seasonal vegetables, paneer, nuts, and raisins, delicately spiced and garnished with saffron and fresh mint',
           isVegetarian: true
         },
         {
           id: 'jeera_rice',
           name: 'Jeera Rice',
           price: '$4.99',
-          description: 'Basmati rice flavored with cumin seeds',
-          emoji: '🍚',
+          description: 'Fluffy basmati rice tempered with whole cumin seeds, ghee, and bay leaves for a simple yet aromatic accompaniment',
           isVegetarian: true
         }
       ]
@@ -221,32 +201,28 @@ export const MenuPage: React.FC = () => {
           id: 'naan',
           name: 'Plain Naan',
           price: '$3.99',
-          description: 'Fresh-baked traditional Indian bread from tandoor',
-          emoji: '🫓',
+          description: 'Soft, pillowy leavened bread baked fresh in our traditional clay tandoor oven, brushed with ghee and served warm',
           isVegetarian: true
         },
         {
           id: 'garlic_naan',
           name: 'Garlic Naan',
           price: '$4.99',
-          description: 'Naan topped with fresh garlic and cilantro',
-          emoji: '🧄',
+          description: 'Our signature naan topped with minced fresh garlic, cilantro, and a touch of butter, baked to golden perfection in the tandoor',
           isVegetarian: true
         },
         {
           id: 'roti',
           name: 'Chapati Roti',
           price: '$2.99',
-          description: 'Whole wheat flatbread cooked on griddle',
-          emoji: '🫓',
+          description: 'Traditional unleavened whole wheat flatbread cooked on a hot griddle until soft and slightly charred, a healthy staple of Indian cuisine',
           isVegetarian: true
         },
         {
           id: 'paratha',
           name: 'Aloo Paratha',
           price: '$5.99',
-          description: 'Stuffed flatbread with spiced potato filling',
-          emoji: '🥔',
+          description: 'Flaky, layered whole wheat bread stuffed with seasoned mashed potatoes, onions, and spices, cooked on a griddle with ghee',
           isVegetarian: true
         }
       ]
@@ -258,16 +234,14 @@ export const MenuPage: React.FC = () => {
           id: 'raita',
           name: 'Cucumber Raita',
           price: '$3.99',
-          description: 'Cool yogurt with cucumber, mint, and cumin',
-          emoji: '🥒',
+          description: 'Refreshing yogurt-based side dish with diced cucumber, fresh mint, roasted cumin, and a hint of black salt for cooling relief',
           isVegetarian: true
         },
         {
           id: 'pickle',
           name: 'Mixed Pickle',
           price: '$2.99',
-          description: 'Spicy Indian pickle with mixed vegetables',
-          emoji: '🥒',
+          description: 'Traditional Indian pickle featuring mixed vegetables and fruits preserved in mustard oil with aromatic spices and red chilies',
           isVegetarian: true,
           isSpicy: true
         }
@@ -280,16 +254,14 @@ export const MenuPage: React.FC = () => {
           id: 'lassi',
           name: 'Mango Lassi',
           price: '$4.99',
-          description: 'Creamy yogurt drink with fresh mango',
-          emoji: '🥭',
+          description: 'Smooth and creamy yogurt-based drink blended with sweet mango pulp, a touch of cardamom, and garnished with pistachios',
           isVegetarian: true
         },
         {
           id: 'chai',
           name: 'Masala Chai',
           price: '$3.99',
-          description: 'Traditional Indian spiced tea with milk',
-          emoji: '🫖',
+          description: 'Aromatic black tea simmered with whole spices including cardamom, cinnamon, ginger, and cloves, served with steamed milk and sugar',
           isVegetarian: true
         }
       ]
@@ -301,16 +273,14 @@ export const MenuPage: React.FC = () => {
           id: 'gulab_jamun',
           name: 'Gulab Jamun',
           price: '$5.99',
-          description: 'Soft milk dumplings in sweet rose syrup',
-          emoji: '🍯',
+          description: 'Soft, spongy milk dumplings made from khoya, gently fried and soaked in fragrant rose-cardamom syrup, served warm',
           isVegetarian: true
         },
         {
           id: 'kulfi',
           name: 'Kulfi',
           price: '$4.99',
-          description: 'Traditional Indian ice cream with cardamom and pistachios',
-          emoji: '🍨',
+          description: 'Rich, dense traditional Indian ice cream made with reduced milk, cardamom, and saffron, garnished with chopped pistachios and almonds',
           isVegetarian: true
         }
       ]
@@ -384,7 +354,7 @@ export const MenuPage: React.FC = () => {
     }
   }, [checkScrollButtons]);
   return (
-    <div className="pt-16 min-h-screen parchment-bg">
+    <div className="pt-16 min-h-screen vintage-parchment-bg">
       <OrderModal 
         isOpen={isOrderModalOpen} 
         onClose={() => setIsOrderModalOpen(false)} 
@@ -414,7 +384,7 @@ export const MenuPage: React.FC = () => {
               <div className="hidden sm:block w-16 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
             </div>
             
-            <h1 className="menu-title-elegant text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 relative">
+            <h1 className="vintage-menu-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 relative">
               <span className="menu-glow-text">Our Menu</span>
             </h1>
             
@@ -425,8 +395,8 @@ export const MenuPage: React.FC = () => {
               <div className="w-8 h-px bg-yellow-400 opacity-60"></div>
             </div>
             
-            <p className="menu-subtitle-elegant text-xl md:text-2xl lg:text-3xl text-yellow-200 italic font-light leading-relaxed max-w-4xl mx-auto">
-              Authentic Punjabi dishes prepared with traditional recipes and finest ingredients
+            <p className="vintage-menu-subtitle text-xl md:text-2xl lg:text-3xl text-yellow-200 italic font-light leading-relaxed max-w-4xl mx-auto">
+              Artisanal Punjabi cuisine crafted with time-honored recipes and the finest ingredients from the heart of India
             </p>
           
           {/* Ornamental Bottom Flourish */}
@@ -442,7 +412,7 @@ export const MenuPage: React.FC = () => {
       </section>
 
       {/* Menu Navigation */}
-      <div className="category-nav-elegant sticky top-16 z-40">
+      <div className="vintage-category-nav sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden md:flex items-center py-6 relative">
@@ -450,10 +420,10 @@ export const MenuPage: React.FC = () => {
             {showLeftArrow && (
               <button
                 onClick={() => scrollCategories('left')}
-                className="absolute left-0 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-amber-200 rounded-full flex items-center justify-center text-amber-800 hover:bg-amber-50 hover:border-amber-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="absolute left-0 z-10 w-14 h-14 bg-white/95 backdrop-blur-md border-2 border-amber-300 rounded-full flex items-center justify-center text-amber-900 hover:bg-amber-50 hover:border-amber-400 transition-all duration-400 shadow-xl hover:shadow-2xl hover:scale-105"
                 aria-label="Scroll categories left"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={24} />
               </button>
             )}
             
@@ -470,10 +440,10 @@ export const MenuPage: React.FC = () => {
                 <button
                   key={sectionIds[index]}
                   onClick={() => handleSectionChange(sectionIds[index])}
-                  className={`category-button-elegant whitespace-nowrap px-6 py-3 rounded-full font-medium transition-all duration-300 flex-shrink-0 ${
+                  className={`vintage-category-button whitespace-nowrap px-8 py-4 rounded-full font-semibold transition-all duration-400 flex-shrink-0 ${
                     activeSection === sectionIds[index]
-                      ? 'bg-gradient-to-r from-amber-700 to-amber-800 text-white shadow-lg active'
-                      : 'text-amber-800 hover:bg-amber-50'
+                      ? 'bg-gradient-to-r from-amber-800 to-amber-900 text-white shadow-xl active'
+                      : 'text-amber-900 hover:bg-amber-50 hover:shadow-lg'
                   } ${activeSection === sectionIds[index] ? 'active' : ''}`}
                 >
                   {section.title}
@@ -485,10 +455,10 @@ export const MenuPage: React.FC = () => {
             {showRightArrow && (
               <button
                 onClick={() => scrollCategories('right')}
-                className="absolute right-0 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-amber-200 rounded-full flex items-center justify-center text-amber-800 hover:bg-amber-50 hover:border-amber-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="absolute right-0 z-10 w-14 h-14 bg-white/95 backdrop-blur-md border-2 border-amber-300 rounded-full flex items-center justify-center text-amber-900 hover:bg-amber-50 hover:border-amber-400 transition-all duration-400 shadow-xl hover:shadow-2xl hover:scale-105"
                 aria-label="Scroll categories right"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={24} />
               </button>
             )}
           </div>
@@ -508,7 +478,7 @@ export const MenuPage: React.FC = () => {
                     }
                   }
                 }}
-                className="w-full appearance-none bg-white/95 backdrop-blur-sm border-2 border-amber-700 rounded-xl px-6 py-4 pr-12 text-amber-800 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 menu-title-elegant"
+                className="vintage-dropdown w-full appearance-none rounded-xl px-6 py-4 pr-12 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-400"
               >
                 <option value="all">View Complete Menu</option>
                 {menuSections.map((section, index) => (
@@ -519,7 +489,7 @@ export const MenuPage: React.FC = () => {
               </select>
               {/* Custom dropdown arrow */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <ChevronDown className="h-6 w-6 text-amber-800" />
+                <ChevronDown className="h-6 w-6 text-amber-900" />
               </div>
             </div>
           </div>
@@ -534,9 +504,9 @@ export const MenuPage: React.FC = () => {
             id={sectionIds[index]}
             className={`mb-20 menu-fade-in-delayed ${activeSection !== sectionIds[index] ? 'hidden' : ''}`}
           >
-            <div className="elegant-separator">
-              <div className="elegant-separator-ornament">
-                <h2 className="menu-title-elegant text-3xl md:text-4xl font-bold text-amber-900 tracking-wide">
+            <div className="vintage-separator vintage-motif">
+              <div className="vintage-separator-ornament">
+                <h2 className="vintage-menu-title text-3xl md:text-4xl font-bold text-amber-900 tracking-wide">
                   {section.title}
                 </h2>
               </div>
@@ -544,43 +514,46 @@ export const MenuPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {section.items.map((item) => (
-                <div key={item.id} className="premium-menu-card rounded-2xl overflow-hidden menu-item-fade">
-                  <div className="p-8">
+                <div key={item.id} className="vintage-menu-card rounded-2xl overflow-hidden menu-item-fade vintage-motif">
+                  <div className="p-8 relative z-10">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1">
-                        <h3 className="menu-title-elegant text-2xl font-bold text-amber-900 leading-tight mb-2">{item.name}</h3>
+                        <h3 className="vintage-menu-title text-2xl font-bold text-amber-900 leading-tight mb-3">{item.name}</h3>
                         <div className="flex flex-wrap gap-2 mb-3">
                           {item.isVegetarian && (
-                            <span className="dietary-badge-elegant dietary-badge-vegetarian">Vegetarian</span>
+                            <span className="vintage-dietary-badge vintage-dietary-badge-vegetarian">Vegetarian</span>
                           )}
                           {item.isSpicy && (
-                            <span className="dietary-badge-elegant dietary-badge-spicy">Spicy</span>
+                            <span className="vintage-dietary-badge vintage-dietary-badge-spicy">Spicy</span>
                           )}
                         </div>
                       </div>
                       <div className="text-right ml-4">
-                        <span className="elegant-price">{item.price}</span>
+                        <span className="vintage-price">{item.price}</span>
                       </div>
                     </div>
                     
-                    <p className="menu-description-elegant mb-6 leading-relaxed text-base">{item.description}</p>
+                    <p className="vintage-menu-description mb-6 leading-relaxed text-base">{item.description}</p>
                     
-                    {/* Elegant divider */}
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent mb-6"></div>
+                    {/* Vintage ornamental divider */}
+                    <div className="relative mb-6">
+                      <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
+                      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-amber-300 rounded-full"></div>
+                    </div>
                     
-                    {/* Image Placeholder with elegant styling */}
-                    <div className="w-full h-32 bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl mb-6 flex items-center justify-center border border-amber-200">
+                    {/* Image Placeholder with vintage styling */}
+                    <div className="vintage-image-placeholder w-full h-32 rounded-xl mb-6 flex items-center justify-center relative">
                       <div className="text-center">
-                        <div className="w-12 h-12 bg-amber-200 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <span className="text-amber-700 text-xl">📸</span>
+                        <div className="vintage-image-icon w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center">
+                          <span className="text-white text-xl">📷</span>
                         </div>
-                        <span className="menu-description-elegant text-sm font-medium">Photo Coming Soon</span>
+                        <span className="vintage-menu-description text-sm font-medium">Artisanal Photo Coming Soon</span>
                       </div>
                     </div>
                     
                     <button 
                       onClick={() => setIsOrderModalOpen(true)}
-                      className="order-button-elegant w-full text-white py-4 px-6 rounded-xl font-bold text-base shadow-lg"
+                      className="vintage-order-button w-full text-white py-4 px-6 rounded-xl font-bold text-base"
                     >
                       Order Now
                     </button>
@@ -596,10 +569,10 @@ export const MenuPage: React.FC = () => {
       <div className="hidden lg:block text-center pb-16">
         <button
           onClick={handleCompleteMenuToggle}
-          className={`px-12 py-4 rounded-xl font-semibold transition-all duration-300 menu-title-elegant ${
+          className={`px-12 py-4 rounded-xl font-semibold transition-all duration-400 vintage-menu-title ${
             activeSection === 'all'
-              ? 'bg-gradient-to-r from-amber-700 to-amber-800 text-white shadow-lg'
-              : 'border-2 border-amber-700 text-amber-800 hover:bg-gradient-to-r hover:from-amber-700 hover:to-amber-800 hover:text-white'
+              ? 'bg-gradient-to-r from-amber-800 to-amber-900 text-white shadow-xl'
+              : 'border-2 border-amber-800 text-amber-900 hover:bg-gradient-to-r hover:from-amber-800 hover:to-amber-900 hover:text-white hover:shadow-xl'
           }`}
         >
           {activeSection === 'all' ? 'Back to Categories' : 'View Complete Menu'}
@@ -611,9 +584,9 @@ export const MenuPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           {menuSections.map((section, index) => (
             <section key={`all-${sectionIds[index]}`} className="mb-20 menu-fade-in">
-              <div className="elegant-separator">
-                <div className="elegant-separator-ornament">
-                  <h2 className="menu-title-elegant text-3xl font-bold text-amber-900 tracking-wide">
+              <div className="vintage-separator vintage-motif">
+                <div className="vintage-separator-ornament">
+                  <h2 className="vintage-menu-title text-3xl font-bold text-amber-900 tracking-wide">
                     {section.title}
                   </h2>
                 </div>
@@ -621,29 +594,29 @@ export const MenuPage: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {section.items.map((item) => (
-                  <div key={`all-${item.id}`} className="premium-menu-card rounded-xl overflow-hidden menu-item-fade">
-                    <div className="p-6">
+                  <div key={`all-${item.id}`} className="vintage-menu-card rounded-xl overflow-hidden menu-item-fade vintage-motif">
+                    <div className="p-6 relative z-10">
                       <div className="flex justify-between items-start mb-3">
                         <div className="flex-1">
-                          <h3 className="menu-title-elegant text-lg font-bold text-amber-900 leading-tight mb-2">{item.name}</h3>
+                          <h3 className="vintage-menu-title text-lg font-bold text-amber-900 leading-tight mb-2">{item.name}</h3>
                         </div>
-                        <span className="elegant-price text-lg ml-2">{item.price}</span>
+                        <span className="vintage-price text-lg ml-2">{item.price}</span>
                       </div>
                       
-                      <p className="menu-description-elegant text-sm mb-4 leading-relaxed">{item.description}</p>
+                      <p className="vintage-menu-description text-sm mb-4 leading-relaxed">{item.description}</p>
                       
                       <div className="flex justify-between items-center">
                         <div className="flex flex-wrap gap-1">
                           {item.isVegetarian && (
-                            <span className="dietary-badge-elegant dietary-badge-vegetarian text-xs">Veg</span>
+                            <span className="vintage-dietary-badge vintage-dietary-badge-vegetarian text-xs">Veg</span>
                           )}
                           {item.isSpicy && (
-                            <span className="dietary-badge-elegant dietary-badge-spicy text-xs">Spicy</span>
+                            <span className="vintage-dietary-badge vintage-dietary-badge-spicy text-xs">Spicy</span>
                           )}
                         </div>
                         <button 
                           onClick={() => setIsOrderModalOpen(true)}
-                          className="order-button-elegant text-white py-2 px-4 rounded-lg text-sm font-bold shadow-md"
+                          className="vintage-order-button text-white py-2 px-4 rounded-lg text-sm font-bold"
                         >
                           Order
                         </button>
