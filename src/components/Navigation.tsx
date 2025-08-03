@@ -39,7 +39,7 @@ export const Navigation: React.FC = () => {
               width="36" 
               height="36" 
               viewBox="0 0 100 100" 
-              className="flex-shrink-0"
+              className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
             >
               <defs>
                 <linearGradient id="lotusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -72,11 +72,11 @@ export const Navigation: React.FC = () => {
               <circle cx="50" cy="50" r="4" fill="rgba(255, 255, 255, 0.9)" />
             </svg>
             
-            <div className="text-logo-container">
-              <div className="text-logo-main font-bold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide leading-tight">
+            <div className="text-logo-container group">
+              <div className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide leading-tight text-yellow-300 group-hover:text-yellow-200 transition-colors duration-300">
                 Azaad Indian Cuisine
               </div>
-              <div className="text-logo-sub text-xs sm:text-sm font-light italic tracking-wider leading-none mt-0.5">
+              <div className="text-xs sm:text-sm font-light italic tracking-wider leading-none mt-0.5 text-yellow-300 group-hover:text-yellow-200 transition-colors duration-300">
                 Discover the Taste of India
               </div>
             </div>

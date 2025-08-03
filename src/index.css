@@ -350,28 +350,15 @@ html {
   font-family: 'Cormorant Garamond', 'Playfair Display', serif;
 }
 
-.text-logo-main {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FEF3C7 30%, #FCD34D 70%, #FFFFFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-logo-sub {
-  color: #FCD34D;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-
 /* Enhanced mobile responsive adjustments for text logo */
 @media (max-width: 640px) {
-  .text-logo-main {
+  .text-logo-container .font-bold {
     font-size: 0.95rem;
     line-height: 1.1;
     letter-spacing: 0.5px;
   }
   
-  .text-logo-sub {
+  .text-logo-container .text-xs {
     font-size: 0.65rem;
     margin-top: 0;
     letter-spacing: 0.3px;
@@ -379,12 +366,12 @@ html {
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
-  .text-logo-main {
+  .text-logo-container .font-bold {
     font-size: 1.1rem;
     letter-spacing: 0.8px;
   }
   
-  .text-logo-sub {
+  .text-logo-container .text-xs {
     font-size: 0.7rem;
     letter-spacing: 0.5px;
   }
