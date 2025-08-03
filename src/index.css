@@ -302,6 +302,123 @@ html {
   scroll-margin-top: 80px;
 }
 
+/* Custom Cursor Styles */
+* {
+  cursor: none;
+}
+
+body {
+  cursor: none;
+}
+
+/* Custom cursor dot */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0.4) 50%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: transform 0.1s ease-out, opacity 0.2s ease;
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 40px rgba(255, 215, 0, 0.3),
+    0 0 60px rgba(255, 215, 0, 0.1);
+  animation: cursorPulse 2s ease-in-out infinite;
+}
+
+/* Cursor glow animation */
+@keyframes cursorPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 40px rgba(255, 215, 0, 0.3),
+      0 0 60px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.8),
+      0 0 60px rgba(255, 215, 0, 0.5),
+      0 0 90px rgba(255, 215, 0, 0.2);
+  }
+}
+
+/* Cursor trail */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease-out, opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Hover states for interactive elements */
+a, button, input, textarea, select, [role="button"] {
+  cursor: none !important;
+}
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor,
+input:hover ~ .custom-cursor,
+textarea:hover ~ .custom-cursor,
+select:hover ~ .custom-cursor,
+[role="button"]:hover ~ .custom-cursor {
+  transform: scale(1.5);
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.9) 0%, rgba(255, 165, 0, 0.5) 50%, transparent 100%);
+  box-shadow: 
+    0 0 30px rgba(255, 165, 0, 0.8),
+    0 0 60px rgba(255, 165, 0, 0.5),
+    0 0 90px rgba(255, 165, 0, 0.2);
+}
+
+/* Special cursor for clickable elements */
+.cursor-hover {
+  transform: scale(1.5) !important;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.9) 0%, rgba(255, 165, 0, 0.5) 50%, transparent 100%) !important;
+  box-shadow: 
+    0 0 30px rgba(255, 165, 0, 0.8),
+    0 0 60px rgba(255, 165, 0, 0.5),
+    0 0 90px rgba(255, 165, 0, 0.2) !important;
+}
+
+/* Hide cursor on mobile devices */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor,
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+/* Cursor for text selection */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  cursor: none;
+}
+
+/* Special cursor states */
+.cursor-text {
+  transform: scaleX(0.3) scaleY(1.5) !important;
+  background: linear-gradient(to bottom, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0.4) 100%) !important;
+  border-radius: 2px !important;
+}
+
 /* Review element specific styles */
 .review-element {
   position: relative;
