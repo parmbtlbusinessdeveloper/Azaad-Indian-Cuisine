@@ -38,7 +38,7 @@ export const Navigation: React.FC = () => {
       />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex justify-between items-center h-24 xl:h-20 py-3">
+        <div className="flex justify-between items-center h-28 xl:h-24 py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             {/* Elegant Lotus SVG Icon */}
