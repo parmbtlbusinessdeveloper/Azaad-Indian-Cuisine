@@ -10,13 +10,11 @@ export const Footer: React.FC = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-red-900 font-bold text-xl">A</span>
-              </div>
-              <div>
-                <div className="font-bold text-2xl">Azaad Indian Cuisine</div>
-                <div className="text-yellow-300 text-sm">Authentic Punjabi Flavors</div>
-              </div>
+              <img 
+                src="https://i.imgur.com/13b6Lyj.png" 
+                alt="Azaad Indian Cuisine" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Experience the authentic taste of Punjab with our traditional recipes 
