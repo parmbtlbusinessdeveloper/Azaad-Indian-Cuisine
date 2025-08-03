@@ -366,14 +366,18 @@ export const MenuPage: React.FC = () => {
       </section>
 
       {/* Menu Navigation */}
-      <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40">
+      <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
+          {/* Scroll indicators */}
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none md:hidden"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none md:hidden"></div>
+          
+          <div className="flex overflow-x-auto py-4 space-x-4 md:space-x-6 scrollbar-smooth snap-x snap-mandatory">
             {menuSections.map((section, index) => (
               <button
                 key={sectionIds[index]}
                 onClick={() => setActiveSection(sectionIds[index])}
-                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
+                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 snap-center flex-shrink-0 ${
                   activeSection === sectionIds[index]
                     ? 'bg-red-900 text-white'
                     : 'text-red-900 hover:bg-red-100'
