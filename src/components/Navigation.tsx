@@ -121,11 +121,11 @@ export const Navigation: React.FC = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            <div className="relative w-6 h-6">
+            <div className="relative w-6 h-6 flex items-center justify-center">
               {/* Animated hamburger/close icon */}
-              <span className={`absolute top-1 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 top-2.5' : ''}`}></span>
-              <span className={`absolute top-2.5 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`absolute top-4 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 top-2.5' : ''}`}></span>
+              <span className={`absolute w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'}`}></span>
+              <span className={`absolute w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`absolute w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'}`}></span>
             </div>
           </button>
         </div>
@@ -134,12 +134,12 @@ export const Navigation: React.FC = () => {
         <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900 shadow-lg transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-4 py-6 space-y-2 bg-red-900">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-red-900">
             {navLinks.map((link, index) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-4 py-3 font-medium text-base tracking-wide rounded-lg transition-all duration-300 ${
+                className={`block px-4 py-2.5 font-medium text-base tracking-wide rounded-lg transition-all duration-300 ${
                   location.pathname === link.path 
                     ? 'text-yellow-300 bg-white/20' 
                     : 'text-white hover:text-yellow-300 hover:bg-white/15'
@@ -156,12 +156,12 @@ export const Navigation: React.FC = () => {
             ))}
             
             {/* Mobile Order Button */}
-            <div className="pt-4">
+            <div className="pt-3 pb-2">
               <a
                 href="https://www.toasttab.com/azaad-indian-cuisine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-4 rounded-lg font-bold text-center transition-all duration-300"
+                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-3 rounded-lg font-bold text-center transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center justify-center space-x-2">
