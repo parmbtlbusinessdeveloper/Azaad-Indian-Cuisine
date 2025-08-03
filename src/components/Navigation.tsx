@@ -142,18 +142,17 @@ export const Navigation: React.FC = () => {
         <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900/98 backdrop-blur-md border-t border-yellow-400/20 shadow-2xl transition-all duration-500 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-4 py-6 space-y-2">
+          <div className="px-4 py-6 space-y-2 bg-red-900">
             {navLinks.map((link, index) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-4 py-3 text-white font-medium text-base tracking-wide rounded-lg transition-all duration-300 transform ${
+                className={`block px-4 py-3 font-medium text-base tracking-wide rounded-lg transition-all duration-300 transform ${
                   location.pathname === link.path 
-                    ? 'text-yellow-300 bg-white/15 translate-x-2' 
-                    : 'hover:text-yellow-300 hover:bg-white/10 hover:translate-x-2'
+                    ? 'text-yellow-300 bg-white/20 translate-x-2' 
+                    : 'text-white hover:text-yellow-300 hover:bg-white/15 hover:translate-x-2'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
-                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="flex items-center justify-between">
                   <span>{link.label}</span>
@@ -165,12 +164,12 @@ export const Navigation: React.FC = () => {
             ))}
             
             {/* Mobile Order Button */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-white/20">
               <a
                 href="https://www.toasttab.com/azaad-indian-cuisine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-4 rounded-lg font-bold text-center hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-4 rounded-lg font-bold text-center transition-all duration-300 shadow-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center justify-center space-x-2">
