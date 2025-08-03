@@ -127,7 +127,7 @@ export const HomePage: React.FC = () => {
                 <img 
                   src="https://i.imgur.com/13b6Lyj.png" 
                   alt="Azaad Indian Cuisine" 
-                  className="h-16 w-auto filter drop-shadow-lg"
+                  className="h-16 w-auto filter drop-shadow-lg -mt-1"
                 />
               </div>
               
