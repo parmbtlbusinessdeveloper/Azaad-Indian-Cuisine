@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
+import { OrderModal } from './OrderModal';
 
 export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -30,6 +32,11 @@ export const Navigation: React.FC = () => {
         ? 'bg-red-900 shadow-lg' 
         : 'bg-red-900'
     }`}>
+      <OrderModal 
+        isOpen={isOrderModalOpen} 
+        onClose={() => setIsOrderModalOpen(false)} 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-18 py-3">
           {/* Logo */}
@@ -112,15 +119,13 @@ export const Navigation: React.FC = () => {
             
             {/* Enhanced Order Now Button */}
             <div className="ml-4 flex items-center space-x-3">
-              <a 
-                href="https://www.toasttab.com/azaad-indian-cuisine"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setIsOrderModalOpen(true)}
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
               >
                 <Phone size={16} />
                 <span>Order Now</span>
-              </a>
+              </button>
               
               <a 
                 href="/contact#map"
@@ -174,18 +179,18 @@ export const Navigation: React.FC = () => {
             
             {/* Mobile Order Button */}
             <div className="pt-3 pb-2 space-y-3">
-              <a
-                href="https://www.toasttab.com/azaad-indian-cuisine"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => {
+                  setIsOrderModalOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
                 className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-3 rounded-lg font-bold text-center transition-all duration-300 transform hover:scale-105 active:scale-95"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center justify-center space-x-2">
                   <Phone size={18} />
                   <span>Order Now</span>
                 </div>
-              </a>
+              </button>
               
               <a
                 href="/contact#map"

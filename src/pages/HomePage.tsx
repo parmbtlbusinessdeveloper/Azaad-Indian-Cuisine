@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Clock, Award, Play } from 'lucide-react';
+import { OrderModal } from '../components/OrderModal';
 
 export const HomePage: React.FC = () => {
+  const [isOrderModalOpen, setIsOrderModalOpen] = React.useState(false);
+
   return (
     <div className="pt-16">
+      <OrderModal 
+        isOpen={isOrderModalOpen} 
+        onClose={() => setIsOrderModalOpen(false)} 
+      />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800">
         
@@ -36,14 +44,12 @@ export const HomePage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="https://www.toasttab.com/azaad-indian-cuisine"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => setIsOrderModalOpen(true)}
                   className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 shadow-lg text-center"
                 >
                   Order Now
-                </a>
+                </button>
                 <Link 
                   to="/menu"
                   className="premium-button border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 flex items-center justify-center space-x-2"
@@ -184,14 +190,12 @@ export const HomePage: React.FC = () => {
               >
                 View Menu
               </Link>
-              <a 
-                href="https://www.toasttab.com/azaad-indian-cuisine"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setIsOrderModalOpen(true)}
                 className="premium-button border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 text-center"
               >
                 Order Now
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -336,14 +340,12 @@ export const HomePage: React.FC = () => {
             favorite destination for Indian cuisine.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://www.toasttab.com/azaad-indian-cuisine"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsOrderModalOpen(true)}
               className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-12 py-4 rounded-full font-bold text-xl hover:from-yellow-400 hover:to-orange-400 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Order Now
-            </a>
+            </button>
             <a 
               href="https://maps.google.com/?q=123+Main+Street,+City,+State+12345"
               target="_blank"

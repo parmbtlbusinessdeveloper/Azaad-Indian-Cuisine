@@ -1,6 +1,9 @@
 import React from 'react';
+import { OrderModal } from '../components/OrderModal';
 
 export const GalleryPage: React.FC = () => {
+  const [isOrderModalOpen, setIsOrderModalOpen] = React.useState(false);
+
   const galleryItems = [
     {
       id: 1,
@@ -78,6 +81,11 @@ export const GalleryPage: React.FC = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-amber-50">
+      <OrderModal 
+        isOpen={isOrderModalOpen} 
+        onClose={() => setIsOrderModalOpen(false)} 
+      />
+      
       {/* Header */}
       <section className="bg-gradient-to-r from-red-900 to-red-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
@@ -177,7 +185,10 @@ export const GalleryPage: React.FC = () => {
             Every dish is prepared fresh with the same care and attention to detail you see here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105">
+            <button 
+              onClick={() => setIsOrderModalOpen(true)}
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
+            >
               Order Now
             </button>
             <a 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { OrderModal } from '../components/OrderModal';
 
 interface MenuItem {
   id: string;
@@ -19,6 +20,7 @@ interface MenuSection {
 export const MenuPage: React.FC = () => {
   const [activeSection, setActiveSection] = useState('appetizers');
   const [previousSection, setPreviousSection] = useState('appetizers');
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
   const menuSections: MenuSection[] = [
     {
@@ -334,6 +336,11 @@ export const MenuPage: React.FC = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-amber-50">
+      <OrderModal 
+        isOpen={isOrderModalOpen} 
+        onClose={() => setIsOrderModalOpen(false)} 
+      />
+      
       {/* Header */}
       <section className="bg-gradient-to-r from-red-900 to-red-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
@@ -477,7 +484,10 @@ export const MenuPage: React.FC = () => {
                       <span className="text-gray-500 text-sm">Photo Coming Soon</span>
                     </div>
                     
-                    <button className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-2 px-4 rounded-lg font-semibold hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105">
+                    <button 
+                      onClick={() => setIsOrderModalOpen(true)}
+                      className="w-full bg-gradient-to-r from-red-900 to-red-800 text-white py-2 px-4 rounded-lg font-semibold hover:from-red-800 hover:to-red-700 transition-all duration-200 transform hover:scale-105"
+                    >
                       Order Now
                     </button>
                   </div>
@@ -531,7 +541,10 @@ export const MenuPage: React.FC = () => {
                             <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Spicy</span>
                           )}
                         </div>
-                        <button className="bg-red-900 text-white py-1 px-3 rounded text-sm font-medium hover:bg-red-800 transition-colors duration-200">
+                        <button 
+                          onClick={() => setIsOrderModalOpen(true)}
+                          className="bg-red-900 text-white py-1 px-3 rounded text-sm font-medium hover:bg-red-800 transition-colors duration-200"
+                        >
                           Order
                         </button>
                       </div>
