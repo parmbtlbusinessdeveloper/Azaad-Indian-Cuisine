@@ -205,10 +205,11 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg shadow-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="w-24 h-24 bg-gray-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <p className="font-sans text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl font-light">
+              Discover the soul of Punjab in every bite. Our master chefs weave ancient culinary secrets 
+              with hand-selected spices, creating dishes that tell stories of tradition, family, and 
+              the timeless art of Indian cooking.
+            </p>
                     <span className="text-3xl">🍛</span>
                   </div>
                   <p className="font-sans font-medium">Restaurant Image Placeholder</p>
