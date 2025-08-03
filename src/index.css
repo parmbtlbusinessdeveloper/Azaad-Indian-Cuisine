@@ -220,25 +220,6 @@
   display: none;
 }
 
-/* Smooth scrolling for menu navigation */
-.scrollbar-smooth {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scrollbar-smooth::-webkit-scrollbar {
-  display: none;
-}
-
-/* Snap scrolling for better UX */
-@supports (scroll-snap-type: x mandatory) {
-  .scrollbar-smooth {
-    scroll-snap-type: x mandatory;
-  }
-}
-
 /* Custom gradient text */
 .gradient-text {
   background: linear-gradient(135deg, #FFD700, #FF6B35, #FFD700);
