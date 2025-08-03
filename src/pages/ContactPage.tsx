@@ -226,17 +226,15 @@ export const ContactPage: React.FC = () => {
       <section id="map" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-red-900 text-center mb-8">Find Us</h2>
-          <div className="w-full rounded-lg shadow-lg overflow-hidden border border-yellow-200">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.3908511606046!2d-117.49667212274821!3d33.905338873212834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb7a79b440e8b%3A0x668fcd79ec6e1c78!2sAzaad%20Indian%20cuisine!5e0!3m2!1sen!2sus!4v1754224391027!5m2!1sen!2sus" 
-              width="100%" 
-              height="400" 
-              style={{border: 0}} 
-              allowFullScreen={true}
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Azaad Indian Cuisine Location"
-            />
+          <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg shadow-lg flex items-center justify-center border border-yellow-200">
+            <div className="text-center text-gray-500">
+              <div className="w-24 h-24 bg-gray-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <MapPin size={40} className="text-gray-600" />
+              </div>
+              <p className="font-medium text-lg">Google Maps Integration</p>
+              <p className="text-sm">Replace with embedded Google Maps</p>
+              <p className="text-sm mt-2">4290 Riverwalk Pkwy Ste 306, Riverside, CA 92505</p>
+            </div>
           </div>
         </div>
       </section>
