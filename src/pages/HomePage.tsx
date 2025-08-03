@@ -176,9 +176,8 @@ export const HomePage: React.FC = () => {
               </div>
               
               <p className="font-sans text-base text-gray-200 leading-relaxed max-w-md mx-auto font-light">
-                Discover the soul of Punjab in every bite. Our master chefs honor centuries-old 
-                traditions, transforming the finest spices and time-tested recipes into an 
-                unforgettable culinary journey that celebrates authentic Indian flavors.
+                Experience the rich heritage of Punjab through our carefully crafted dishes, 
+                prepared with traditional spices and techniques passed down through generations.
               </p>
             </div>
             
