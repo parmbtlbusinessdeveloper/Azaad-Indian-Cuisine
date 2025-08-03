@@ -66,8 +66,6 @@ export const HomePage: React.FC = () => {
                 >
                   Order Now
                 </a>
-                <a 
-                  href="#menu"
                 <Link 
                   to="/menu"
                   className="font-sans border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300 flex items-center justify-center space-x-2"
