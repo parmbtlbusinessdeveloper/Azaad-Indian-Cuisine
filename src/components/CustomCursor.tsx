@@ -15,14 +15,23 @@ export const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const trailIdRef = useRef(0);
   const lastTrailTime = useRef(0);
+  const animationFrameRef = useRef<number>();
+  const lastPositionRef = useRef({ x: 0, y: 0 });
 
   // Create trail orb
-  const createTrailOrb = useCallback((x: number, y: number) => {
+  const createTrailOrb = useCallback((x: number, y: number, force = false) => {
     const now = Date.now();
-    // Throttle trail creation to every 50ms for smooth performance
-    if (now - lastTrailTime.current < 50) return;
+    const distance = Math.sqrt(
+      Math.pow(x - lastPositionRef.current.x, 2) + 
+      Math.pow(y - lastPositionRef.current.y, 2)
+    );
+    
+    // Only create orb if mouse moved enough distance or forced
+    if (!force && (now - lastTrailTime.current < 30 || distance < 8)) return;
     
     lastTrailTime.current = now;
+    lastPositionRef.current = { x, y };
+    
     const newOrb: TrailOrb = {
       id: trailIdRef.current++,
       x,
@@ -31,23 +40,57 @@ export const CustomCursor: React.FC = () => {
     };
 
     setTrailOrbs(prev => {
-      // Keep only recent orbs (last 600ms)
-      const filtered = prev.filter(orb => now - orb.timestamp < 600);
-      return [...filtered, newOrb].slice(-8); // Max 8 orbs
+      // Keep only recent orbs (last 800ms) and max 10 orbs
+      const filtered = prev.filter(orb => now - orb.timestamp < 800);
+      return [...filtered, newOrb].slice(-10);
     });
   }, []);
 
+  // Smooth animation loop for cursor following
+  const animateCursor = useCallback((targetX: number, targetY: number) => {
+    const currentPos = position;
+    const dx = targetX - currentPos.x;
+    const dy = targetY - currentPos.y;
+    
+    // Smooth interpolation
+    const newX = currentPos.x + dx * 0.15;
+    const newY = currentPos.y + dy * 0.15;
+    
+    setPosition({ x: newX, y: newY });
+    
+    // Create trail orb based on actual cursor position
+    createTrailOrb(newX, newY);
+  }, [position, createTrailOrb]);
   useEffect(() => {
     // Only enable on desktop
     const isDesktop = window.innerWidth >= 1024;
     if (!isDesktop) return;
 
+    let targetPosition = { x: 0, y: 0 };
+    let isAnimating = false;
+
     const updateCursorPosition = (e: MouseEvent) => {
-      const newX = e.clientX;
-      const newY = e.clientY;
+      targetPosition = { x: e.clientX, y: e.clientY };
       
-      setPosition({ x: newX, y: newY });
-      createTrailOrb(newX, newY);
+      if (!isAnimating) {
+        isAnimating = true;
+        
+        const animate = () => {
+          animateCursor(targetPosition.x, targetPosition.y);
+          
+          const dx = targetPosition.x - position.x;
+          const dy = targetPosition.y - position.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance > 0.5) {
+            animationFrameRef.current = requestAnimationFrame(animate);
+          } else {
+            isAnimating = false;
+          }
+        };
+        
+        animate();
+      }
     };
 
     const handleMouseEnter = (e: Event) => {
@@ -122,8 +165,8 @@ export const CustomCursor: React.FC = () => {
     // Cleanup old trail orbs periodically
     const cleanupInterval = setInterval(() => {
       const now = Date.now();
-      setTrailOrbs(prev => prev.filter(orb => now - orb.timestamp < 600));
-    }, 100);
+      setTrailOrbs(prev => prev.filter(orb => now - orb.timestamp < 800));
+    }, 50);
 
     // Cleanup
     return () => {
@@ -132,6 +175,9 @@ export const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseup', handleMouseUp);
       observer.disconnect();
       clearInterval(cleanupInterval);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
 
       // Remove hover listeners
       const clickableElements = document.querySelectorAll(
@@ -142,7 +188,7 @@ export const CustomCursor: React.FC = () => {
         element.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
-  }, [createTrailOrb]);
+  }, [createTrailOrb, animateCursor, position]);
 
   // Don't render on mobile/tablet
   useEffect(() => {
@@ -178,7 +224,7 @@ export const CustomCursor: React.FC = () => {
           style={{
             left: `${orb.x}px`,
             top: `${orb.y}px`,
-            animationDelay: `${Math.random() * 0.1}s`
+            animationDelay: `${Math.random() * 0.05}s`
           }}
         />
       ))}
