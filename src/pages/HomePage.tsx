@@ -276,7 +276,7 @@ export const HomePage: React.FC = () => {
               <p className="font-sans text-gray-700 text-lg leading-relaxed mb-8 font-light tracking-wide">
                 From our signature <span className="text-orange-600 font-medium italic">butter chicken</span> to our handcrafted <span className="text-yellow-600 font-medium italic">naan bread</span>, every dish 
                 tells a story of <span className="text-red-700 font-medium">cultural heritage</span> and <span className="text-orange-700 font-medium">culinary artistry</span>. We use only the 
-                <span className="text-yellow-700 font-medium">finest ingredients</span> and traditional cooking methods to ensure an <span className="text-red-700 font-medium">unforgettable dining experience</span>.
+                <span className="text-yellow-700 font-medium"> finest ingredients</span> and traditional cooking methods to ensure an <span className="text-red-700 font-medium">unforgettable dining experience</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
