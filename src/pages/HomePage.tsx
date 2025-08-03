@@ -252,7 +252,7 @@ export const HomePage: React.FC = () => {
         {/* 5 Star Reviews Button */}
         <div className="text-center mt-12">
           <a 
-            href="[PASTE GOOGLE REVIEWS URL HERE]"
+            href="https://www.google.com/search?sca_esv=1c28c6d12b6f9275&rlz=1C1VDKB_enUS1065US1065&sxsrf=AE3TifOBCpJKsf9fYNDBUCqVwiwJZ7J71Q:1754223496025&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4N6cInLocOm1O48gBe9ojAM7Py0yZpXyvxItOGNunOyKJtsuM77_YPpHv7aEwGX_kzcJtVi9KUuFqm1a6eQQaxOxO3PpiUXfDeLiMj8IdJ8C_8Zkg%3D%3D&q=Azaad+Indian+cuisine+Reviews&sa=X&ved=2ahUKEwiNjNniz-6OAxUuJUQIHf2eNo8Q0bkNegQISRAD&biw=1718&bih=1304&dpr=1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 border-2 border-yellow-400 hover:border-yellow-500 rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50 review-element"
