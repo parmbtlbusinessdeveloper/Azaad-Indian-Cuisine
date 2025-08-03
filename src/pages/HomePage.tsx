@@ -80,11 +80,11 @@ export const HomePage: React.FC = () => {
             <div className="flex flex-col items-center space-y-6 fade-in-right">
               {/* Video Placeholder */}
               <div className="relative w-full max-w-lg">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 scale-in">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 scale-in float">
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer bounce-in pulse-glow float">
+                      <div className="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer bounce-in pulse-glow">
                         <Play size={32} className="text-red-900 ml-1" />
                       </div>
                       <p className="font-serif text-lg font-semibold fade-in-up">Kitchen in Action</p>
@@ -103,8 +103,8 @@ export const HomePage: React.FC = () => {
                 </div>
                 
                 {/* Decorative elements around video */}
-                <div className="absolute -top-3 -right-3 w-6 h-6 bg-yellow-400 rounded-full opacity-80 bounce-in"></div>
-                <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-orange-500 rounded-full opacity-80 bounce-in"></div>
+                <div className="absolute -top-3 -right-3 w-6 h-6 bg-yellow-400 rounded-full opacity-80 bounce-in float"></div>
+                <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-orange-500 rounded-full opacity-80 bounce-in float"></div>
               </div>
               
               {/* Watch Button */}
@@ -123,11 +123,11 @@ export const HomePage: React.FC = () => {
             {/* Video Section - Top on Mobile */}
             <div className="w-full max-w-sm scale-in">
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 float">
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-3 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer bounce-in pulse-glow float">
+                      <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-3 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer bounce-in pulse-glow">
                         <Play size={24} className="text-red-900 ml-1" />
                       </div>
                       <p className="font-serif text-base font-semibold">Kitchen in Action</p>
@@ -146,8 +146,8 @@ export const HomePage: React.FC = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full opacity-80 bounce-in"></div>
-                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-500 rounded-full opacity-80 bounce-in"></div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full opacity-80 bounce-in float"></div>
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-orange-500 rounded-full opacity-80 bounce-in float"></div>
               </div>
             </div>
             
