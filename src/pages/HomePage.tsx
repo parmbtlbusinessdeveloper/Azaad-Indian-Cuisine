@@ -52,7 +52,7 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <p className="font-sans text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed max-w-2xl font-light tracking-wide bg-black/20 backdrop-blur-sm p-6 rounded-lg border-l-4 border-yellow-400 shadow-lg">
+              <p className="font-sans text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl font-light">
                 Experience the rich heritage of Punjab through our carefully crafted dishes, 
                 prepared with traditional spices and techniques passed down through generations.
               </p>
