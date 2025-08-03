@@ -693,25 +693,17 @@ html {
   
   /* Trail fade animation */
   .cursor-trail.fade {
-    animation: trailFade 0.8s ease-out forwards;
+    animation: trailFade 0.6s ease-out forwards;
   }
   
   @keyframes trailFade {
     0% {
-      opacity: 0.9;
+      opacity: 0.8;
       transform: translate(-50%, -50%) scale(1);
-    }
-    20% {
-      opacity: 0.7;
-      transform: translate(-50%, -50%) scale(0.9);
-    }
-    60% {
-      opacity: 0.4;
-      transform: translate(-50%, -50%) scale(0.6);
     }
     100% {
       opacity: 0;
-      transform: translate(-50%, -50%) scale(0.2);
+      transform: translate(-50%, -50%) scale(0.3);
     }
   }
   
