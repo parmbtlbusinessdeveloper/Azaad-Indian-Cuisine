@@ -214,7 +214,7 @@ export const HomePage: React.FC = () => {
       <div id="menu" className="absolute"></div>
 
       {/* Features Section */}
-      <section className="premium-section bg-white cultural-pattern-subtle">
+      <section className="premium-section bg-white">
         <div className="premium-container">
           <div className="text-center mb-16 cultural-border pt-8">
             <h2 className="elegant-header text-4xl md:text-5xl font-bold text-red-900 mb-6 underline-reveal">Why Choose Azaad?</h2>
@@ -260,7 +260,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Restaurant Introduction */}
-      <section className="premium-section-alt cultural-pattern-warm">
+      <section className="premium-section-alt bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="premium-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="elegant-fade-in">
@@ -315,7 +315,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="premium-section bg-gradient-to-r from-red-900 to-red-800 text-white cultural-pattern-subtle">
+      <section className="premium-section bg-gradient-to-r from-red-900 to-red-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 elegant-fade-in">
           <h2 className="elegant-header text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready for an Authentic Punjabi Experience?
