@@ -123,7 +123,7 @@ export const HomePage: React.FC = () => {
             {/* Video Section - Top on Mobile */}
             <div className="w-full max-w-sm elegant-fade-in mt-8">
               {/* Logo above video on mobile */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-3 mt-4">
                 <img 
                   src="https://i.imgur.com/13b6Lyj.png" 
                   alt="Azaad Indian Cuisine" 
