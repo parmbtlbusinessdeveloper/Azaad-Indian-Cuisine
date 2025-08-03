@@ -2,6 +2,214 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Premium typography base styles */
+.premium-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+.premium-sans {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.elegant-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.refined-subheader {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+}
+
+.premium-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+}
+
+/* Elegant animations */
+.elegant-fade-in {
+  animation: elegantFadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes elegantFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered elegant animations */
+.elegant-fade-in:nth-child(1) { animation-delay: 0.1s; }
+.elegant-fade-in:nth-child(2) { animation-delay: 0.2s; }
+.elegant-fade-in:nth-child(3) { animation-delay: 0.3s; }
+.elegant-fade-in:nth-child(4) { animation-delay: 0.4s; }
+.elegant-fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+/* Underline reveal animation */
+.underline-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D97706, #F59E0B);
+  transition: width 0.3s ease-out;
+}
+
+.underline-reveal:hover::after {
+  width: 100%;
+}
+
+/* Premium button styles */
+.premium-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.premium-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.premium-button:hover::before {
+  left: 100%;
+}
+
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Cultural pattern backgrounds */
+.cultural-pattern-subtle {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(217, 119, 6, 0.03) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.03) 2px, transparent 2px),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(217, 119, 6, 0.02) 40px,
+      rgba(217, 119, 6, 0.02) 80px
+    );
+  background-size: 50px 50px, 50px 50px, 100px 100px;
+}
+
+.cultural-pattern-warm {
+  background: linear-gradient(135deg, 
+    rgba(254, 243, 199, 0.4) 0%, 
+    rgba(253, 230, 138, 0.3) 25%, 
+    rgba(252, 211, 77, 0.2) 50%, 
+    rgba(245, 158, 11, 0.1) 100%
+  );
+}
+
+/* Decorative borders */
+.cultural-border {
+  position: relative;
+}
+
+.cultural-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #D97706, #F59E0B, #D97706);
+  border-radius: 2px;
+}
+
+/* Premium card styles */
+.premium-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(217, 119, 6, 0.1);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(217, 119, 6, 0.2);
+}
+
+/* Section spacing and rhythm */
+.premium-section {
+  padding: 5rem 0;
+}
+
+.premium-section-alt {
+  padding: 6rem 0;
+}
+
+.premium-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .premium-section {
+    padding: 3rem 0;
+  }
+  
+  .premium-section-alt {
+    padding: 4rem 0;
+  }
+  
+  .premium-container {
+    padding: 0 1rem;
+  }
+  
+  .elegant-header {
+    letter-spacing: 0.5px;
+  }
+  
+  .refined-subheader {
+    letter-spacing: 0.5px;
+  }
+}
+
 /* Custom scrollbar styles */
 .scrollbar-hide {
   -ms-overflow-style: none;

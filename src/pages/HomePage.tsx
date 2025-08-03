@@ -6,7 +6,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-red-950 via-red-900 to-amber-800 cultural-pattern-subtle">
         {/* Traditional Punjabi Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="w-full h-full" style={{
@@ -34,9 +34,9 @@ export const HomePage: React.FC = () => {
           {/* Desktop Layout */}
           <div className="hidden lg:grid grid-cols-2 gap-12 items-center min-h-screen py-20">
             {/* Left Column - Text Content (Desktop) */}
-            <div className="text-white space-y-8 fade-in">
+            <div className="text-white space-y-8 elegant-fade-in">
               <div className="space-y-6">
-                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-wide">
+                <h1 className="elegant-header text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                   <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
                     Authentic Indian
                   </span>
@@ -47,13 +47,13 @@ export const HomePage: React.FC = () => {
                 
                 <div className="w-32 h-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
                 
-                <p className="font-serif text-xl md:text-2xl lg:text-3xl text-yellow-200 font-medium leading-relaxed italic">
+                <p className="refined-subheader text-xl md:text-2xl lg:text-3xl text-yellow-200 font-medium leading-relaxed italic">
                   Bold flavors. Warm hospitality.<br />
                   A culinary journey worth sharing.
                 </p>
               </div>
               
-              <p className="font-sans text-xl md:text-2xl text-gray-100 leading-relaxed max-w-2xl font-light tracking-wide">
+              <p className="premium-body text-xl md:text-2xl text-gray-100 leading-relaxed max-w-2xl font-light">
                 Experience the <span className="text-yellow-200 font-medium">rich heritage of Punjab</span> through our carefully crafted dishes, prepared with <span className="text-orange-200 font-medium">traditional spices</span> and techniques <span className="text-yellow-200 font-medium italic">passed down through generations</span>.
               </p>
               
@@ -62,13 +62,13 @@ export const HomePage: React.FC = () => {
                   href="https://www.toasttab.com/azaad-indian-cuisine"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
+                  className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 shadow-lg text-center"
                 >
                   Order Now
                 </a>
                 <Link 
                   to="/menu"
-                  className="font-sans border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="premium-button border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 flex items-center justify-center space-x-2"
                 >
                   <span>View Menu</span>
                   <ArrowRight size={20} />
@@ -77,18 +77,18 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Right Column - Video Section (Desktop) */}
-            <div className="flex flex-col items-center space-y-6 fade-in">
+            <div className="flex flex-col items-center space-y-6 elegant-fade-in">
               {/* Video Placeholder */}
               <div className="relative w-full max-w-lg">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 premium-card">
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer">
+                      <div className="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-yellow-400 transition-all duration-300 cursor-pointer hover:scale-110">
                         <Play size={32} className="text-red-900 ml-1" />
                       </div>
-                      <p className="font-serif text-lg font-semibold">Kitchen in Action</p>
-                      <p className="font-sans text-sm text-gray-300">See our chefs at work</p>
+                      <p className="refined-subheader text-lg font-semibold">Kitchen in Action</p>
+                      <p className="premium-body text-sm text-gray-300">See our chefs at work</p>
                     </div>
                   </div>
                   {/* Decorative overlay suggesting video content */}
@@ -110,7 +110,7 @@ export const HomePage: React.FC = () => {
               {/* Watch Button */}
               <a 
                 href="/gallery"
-                className="font-sans bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2"
+                className="premium-button bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 border border-white/20 flex items-center space-x-2"
               >
                 <Play size={18} />
                 <span>Watch Our Kitchen in Action</span>
@@ -121,17 +121,17 @@ export const HomePage: React.FC = () => {
           {/* Mobile Layout */}
           <div className="lg:hidden flex flex-col items-center min-h-screen py-12 space-y-8">
             {/* Video Section - Top on Mobile */}
-            <div className="w-full max-w-sm fade-in">
+            <div className="w-full max-w-sm elegant-fade-in">
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-4 border-yellow-400/20 premium-card">
                   <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-3 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer">
+                      <div className="w-16 h-16 bg-yellow-500/90 rounded-full flex items-center justify-center mx-auto mb-3 hover:bg-yellow-400 transition-all duration-300 cursor-pointer hover:scale-110">
                         <Play size={24} className="text-red-900 ml-1" />
                       </div>
-                      <p className="font-serif text-base font-semibold">Kitchen in Action</p>
-                      <p className="font-sans text-xs text-gray-300">See our chefs at work</p>
+                      <p className="refined-subheader text-base font-semibold">Kitchen in Action</p>
+                      <p className="premium-body text-xs text-gray-300">See our chefs at work</p>
                     </div>
                   </div>
                   {/* Decorative overlay */}
@@ -152,9 +152,9 @@ export const HomePage: React.FC = () => {
             </div>
             
             {/* Text Content - Centered on Mobile */}
-            <div className="text-white text-center space-y-6 fade-in px-4">
+            <div className="text-white text-center space-y-6 elegant-fade-in px-4">
               <div className="space-y-4">
-                <h1 className="font-serif text-4xl sm:text-5xl font-bold leading-tight tracking-wide">
+                <h1 className="elegant-header text-4xl sm:text-5xl font-bold leading-tight">
                   <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
                     Authentic Indian
                   </span>
@@ -168,23 +168,23 @@ export const HomePage: React.FC = () => {
                   <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg animate-pulse"></div>
                 </div>
                 
-                <p className="font-serif text-lg sm:text-xl text-yellow-200 font-medium leading-relaxed italic max-w-sm mx-auto">
+                <p className="refined-subheader text-lg sm:text-xl text-yellow-200 font-medium leading-relaxed italic max-w-sm mx-auto">
                   Bold flavors. Warm hospitality.<br />
                   A culinary journey worth sharing.
                 </p>
               </div>
               
-              <p className="font-sans text-base text-gray-200 leading-relaxed max-w-md mx-auto font-light">
+              <p className="premium-body text-base text-gray-200 leading-relaxed max-w-md mx-auto font-light">
                 Experience the rich heritage of Punjab through our carefully crafted dishes, 
                 prepared with traditional spices and techniques passed down through generations.
               </p>
             </div>
             
             {/* Action Buttons - Mobile */}
-            <div className="flex flex-col space-y-4 w-full max-w-sm px-4 fade-in">
+            <div className="flex flex-col space-y-4 w-full max-w-sm px-4 elegant-fade-in">
               <Link 
                 to="/menu"
-                className="font-sans bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg text-center hover:shadow-yellow-500/25"
+                className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 shadow-lg text-center hover:shadow-yellow-500/25"
               >
                 View Menu
               </Link>
@@ -192,7 +192,7 @@ export const HomePage: React.FC = () => {
                 href="https://www.toasttab.com/azaad-indian-cuisine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300 text-center"
+                className="premium-button border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 text-center"
               >
                 Order Now
               </a>
@@ -201,7 +201,7 @@ export const HomePage: React.FC = () => {
             {/* Watch Button - Mobile */}
             <Link 
               to="/gallery"
-              className="font-sans bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2 fade-in"
+              className="premium-button bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 border border-white/20 flex items-center space-x-2 elegant-fade-in"
             >
               <Play size={16} />
               <span>Watch Our Kitchen in Action</span>
@@ -214,42 +214,43 @@ export const HomePage: React.FC = () => {
       <div id="menu" className="absolute"></div>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-red-900 mb-6">Why Choose Azaad?</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto"></div>
+      <section className="premium-section bg-white cultural-pattern-subtle">
+        <div className="premium-container">
+          <div className="text-center mb-16 cultural-border pt-8">
+            <h2 className="elegant-header text-4xl md:text-5xl font-bold text-red-900 mb-6 underline-reveal">Why Choose Azaad?</h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mb-4"></div>
+            <p className="premium-body text-lg text-gray-600 max-w-2xl mx-auto">Discover what makes our authentic Punjabi cuisine truly exceptional</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg">
+            <div className="text-center p-8 rounded-lg premium-card elegant-fade-in">
               <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="text-yellow-300" size={32} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-red-900 mb-3">Authentic Recipes</h3>
-              <p className="font-sans text-gray-600 leading-relaxed">
+              <h3 className="refined-subheader text-xl font-semibold text-red-900 mb-4">Authentic Recipes</h3>
+              <p className="premium-body text-gray-600 leading-relaxed">
                 Traditional Punjabi recipes handed down through generations, 
                 using authentic spices imported directly from India.
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg">
+            <div className="text-center p-8 rounded-lg premium-card elegant-fade-in">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="text-white" size={32} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-red-900 mb-3">Fresh Daily</h3>
-              <p className="font-sans text-gray-600 leading-relaxed">
+              <h3 className="refined-subheader text-xl font-semibold text-red-900 mb-4">Fresh Daily</h3>
+              <p className="premium-body text-gray-600 leading-relaxed">
                 All dishes prepared fresh daily with the finest ingredients. 
                 No preservatives, just pure, wholesome flavors.
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg">
+            <div className="text-center p-8 rounded-lg premium-card elegant-fade-in">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="text-white" size={32} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-red-900 mb-3">Award Winning</h3>
-              <p className="font-sans text-gray-600 leading-relaxed">
+              <h3 className="refined-subheader text-xl font-semibold text-red-900 mb-4">Award Winning</h3>
+              <p className="premium-body text-gray-600 leading-relaxed">
                 Recognized for excellence in authentic Indian cuisine and 
                 outstanding service in our community.
               </p>
@@ -259,21 +260,21 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Restaurant Introduction */}
-      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="premium-section-alt cultural-pattern-warm">
+        <div className="premium-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-red-900 mb-6 leading-tight">
+            <div className="elegant-fade-in">
+              <h2 className="elegant-header text-4xl md:text-5xl font-bold text-red-900 mb-6 leading-tight underline-reveal">
                 A Taste of Punjab in Every Bite ✨
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mb-8"></div>
-              <p className="font-sans text-gray-700 text-lg leading-relaxed mb-6 font-light tracking-wide">
+              <p className="premium-body text-gray-700 text-lg leading-relaxed mb-6 font-light">
                 Welcome to Azaad Indian Cuisine, where the vibrant flavors of <span className="text-red-800 font-medium">Punjab come alive</span>. 
                 Our <span className="text-orange-700 font-medium">family-owned restaurant</span> brings you the most authentic Indian dining experience, 
                 featuring traditional 🔥 <span className="text-red-700 font-medium">tandoor cooking</span>, aromatic <span className="text-yellow-700 font-medium">biryanis</span>, and rich <span className="text-orange-700 font-medium">curries</span> that 
                 have been perfected over generations.
               </p>
-              <p className="font-sans text-gray-700 text-lg leading-relaxed mb-8 font-light tracking-wide">
+              <p className="premium-body text-gray-700 text-lg leading-relaxed mb-8 font-light">
                 From our signature <span className="text-orange-600 font-medium italic">butter chicken</span> to our handcrafted <span className="text-yellow-600 font-medium italic">naan bread</span>, every dish 
                 tells a story of <span className="text-red-700 font-medium">cultural heritage</span> and <span className="text-orange-700 font-medium">culinary artistry</span>. We use only the 
                 <span className="text-yellow-700 font-medium"> finest ingredients</span> and traditional cooking methods to ensure an <span className="text-red-700 font-medium">unforgettable dining experience</span>.
@@ -281,14 +282,14 @@ export const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/menu"
-                  className="font-sans bg-red-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-800 transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  className="premium-button bg-red-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-800 text-center shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
                   <span>🍽️</span>
                   <span>Explore Our Menu</span>
                 </Link>
                 <Link 
                   to="/gallery"
-                  className="font-sans border-2 border-red-900 text-red-900 px-8 py-4 rounded-lg font-semibold hover:bg-red-900 hover:text-white transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  className="premium-button border-2 border-red-900 text-red-900 px-8 py-4 rounded-lg font-semibold hover:bg-red-900 hover:text-white text-center shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
                   <span>📸</span>
                   <span>View Gallery</span>
@@ -296,16 +297,16 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-yellow-400/20 overflow-hidden">
+            <div className="relative elegant-fade-in">
+              <div className="w-full h-96 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-yellow-400/20 overflow-hidden premium-card">
                 {/* Enhanced placeholder with better styling */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-100/30 to-red-100/30"></div>
                 <div className="text-center text-gray-500">
                   <div className="w-32 h-32 bg-gradient-to-br from-red-400 to-orange-400 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl">
                     <span className="text-5xl">🍛</span>
                   </div>
-                  <p className="font-serif font-bold text-xl text-gray-600 mb-2">Restaurant Ambiance</p>
-                  <p className="font-sans text-sm text-gray-500">Coming Soon: Interior Photos</p>
+                  <p className="refined-subheader font-bold text-xl text-gray-600 mb-2">Restaurant Ambiance</p>
+                  <p className="premium-body text-sm text-gray-500">Coming Soon: Interior Photos</p>
                 </div>
               </div>
             </div>
@@ -314,12 +315,12 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-red-900 to-red-800 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+      <section className="premium-section bg-gradient-to-r from-red-900 to-red-800 text-white cultural-pattern-subtle">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 elegant-fade-in">
+          <h2 className="elegant-header text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready for an Authentic Punjabi Experience?
           </h2>
-          <p className="font-serif text-xl md:text-2xl text-yellow-200 mb-8 italic">
+          <p className="refined-subheader text-xl md:text-2xl text-yellow-200 mb-8 italic">
             Join us for lunch or dinner and discover why we're the community's 
             favorite destination for Indian cuisine.
           </p>
@@ -328,13 +329,13 @@ export const HomePage: React.FC = () => {
               href="https://www.toasttab.com/azaad-indian-cuisine"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
+              className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-400 hover:to-orange-400"
             >
               Order for Delivery
             </a>
             <Link 
               to="/contact"
-              className="font-sans border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900 transition-all duration-300"
+              className="premium-button border-2 border-yellow-300 text-yellow-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 hover:text-red-900"
             >
               Make a Reservation
             </Link>
