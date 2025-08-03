@@ -264,33 +264,33 @@ export const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-red-900 mb-6 leading-tight">
-                🍛 A Taste of Punjab in Every Bite ✨
+                A Taste of Punjab in Every Bite ✨
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mb-8"></div>
               <p className="font-sans text-gray-700 text-lg leading-relaxed mb-6 font-light tracking-wide">
-                🙏 Welcome to Azaad Indian Cuisine, where the vibrant flavors of <span className="text-red-800 font-medium">Punjab come alive</span>. 
-                Our 👨‍👩‍👧‍👦 <span className="text-orange-700 font-medium">family-owned restaurant</span> brings you the most authentic Indian dining experience, 
-                featuring traditional 🔥 <span className="text-red-700 font-medium">tandoor cooking</span>, aromatic 🍚 <span className="text-yellow-700 font-medium">biryanis</span>, and rich 🍛 <span className="text-orange-700 font-medium">curries</span> that 
+                Welcome to Azaad Indian Cuisine, where the vibrant flavors of <span className="text-red-800 font-medium">Punjab come alive</span>. 
+                Our <span className="text-orange-700 font-medium">family-owned restaurant</span> brings you the most authentic Indian dining experience, 
+                featuring traditional 🔥 <span className="text-red-700 font-medium">tandoor cooking</span>, aromatic <span className="text-yellow-700 font-medium">biryanis</span>, and rich <span className="text-orange-700 font-medium">curries</span> that 
                 have been perfected over generations.
               </p>
               <p className="font-sans text-gray-700 text-lg leading-relaxed mb-8 font-light tracking-wide">
-                From our signature 🧈 <span className="text-orange-600 font-medium italic">butter chicken</span> to our handcrafted 🫓 <span className="text-yellow-600 font-medium italic">naan bread</span>, every dish 
-                tells a story of 🏛️ <span className="text-red-700 font-medium">cultural heritage</span> and 🎨 <span className="text-orange-700 font-medium">culinary artistry</span>. We use only the 
-                ⭐ <span className="text-yellow-700 font-medium">finest ingredients</span> and traditional cooking methods to ensure an unforgettable 
-                ✨ <span className="text-red-700 font-medium">dining experience</span>.
+                From our signature <span className="text-orange-600 font-medium italic">butter chicken</span> to our handcrafted <span className="text-yellow-600 font-medium italic">naan bread</span>, every dish 
+                tells a story of <span className="text-red-700 font-medium">cultural heritage</span> and <span className="text-orange-700 font-medium">culinary artistry</span>. We use only the 
+                <span className="text-yellow-700 font-medium">finest ingredients</span> and traditional cooking methods to ensure an unforgettable 
+                <span className="text-red-700 font-medium">dining experience</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/menu"
                   className="font-sans bg-red-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-800 transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
-                  <span>🍽️ Explore Our Menu</span>
+                  <span>Explore Our Menu</span>
                 </Link>
                 <Link 
                   to="/gallery"
                   className="font-sans border-2 border-red-900 text-red-900 px-8 py-4 rounded-lg font-semibold hover:bg-red-900 hover:text-white transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
-                  <span>📸 View Gallery</span>
+                  <span>View Gallery</span>
                 </Link>
               </div>
             </div>
@@ -303,19 +303,19 @@ export const HomePage: React.FC = () => {
                   <div className="w-32 h-32 bg-gradient-to-br from-red-400 to-orange-400 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl">
                     <span className="text-5xl">🍛</span>
                   </div>
-                  <p className="font-serif font-bold text-xl text-gray-600 mb-2">🏪 Restaurant Ambiance</p>
-                  <p className="font-sans text-sm text-gray-500">📷 Coming Soon: Interior Photos</p>
+                  <p className="font-serif font-bold text-xl text-gray-600 mb-2">Restaurant Ambiance</p>
+                  <p className="font-sans text-sm text-gray-500">Coming Soon: Interior Photos</p>
                 </div>
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-xl">⭐</span>
+                <span className="text-xl">✨</span>
               </div>
               <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-lg">🌶️</span>
               </div>
               <div className="absolute top-1/2 -left-4 w-8 h-8 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-sm">✨</span>
+                <span className="text-sm">⭐</span>
               </div>
             </div>
           </div>
