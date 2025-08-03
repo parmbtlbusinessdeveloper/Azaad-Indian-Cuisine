@@ -101,8 +101,12 @@ export const Navigation: React.FC = () => {
                     : 'hover:text-yellow-300 hover:bg-white/5'
                 }`}
               >
-                {/* Hover underline effect */}
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8 rounded-full"></span>
+                {/* Active and hover underline effect */}
+                <span className={`absolute bottom-0 left-1/2 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 rounded-full ${
+                  location.pathname === link.path 
+                    ? 'w-3/4 -translate-x-1/2' 
+                    : 'w-0 group-hover:w-3/4 group-hover:-translate-x-1/2'
+                }`}></span>
                 {link.label}
               </Link>
             ))}
@@ -179,8 +183,6 @@ export const Navigation: React.FC = () => {
         </div>
       </div>
 
-      {/* Simple Bottom Border */}
-      <div className="h-0.5 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500 opacity-80"></div>
     </nav>
   );
 };
