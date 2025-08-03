@@ -97,12 +97,12 @@ export const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-white font-medium text-base tracking-wide transition-all duration-300 rounded-lg ${
+                className={`relative px-2 lg:px-4 py-2 text-white font-medium text-xs lg:text-base tracking-wide transition-all duration-300 rounded-lg ${
                   location.pathname === link.path 
                     ? 'text-yellow-300 bg-white/10' 
                     : 'hover:text-yellow-300 hover:bg-white/5'
@@ -118,30 +118,34 @@ export const Navigation: React.FC = () => {
             ))}
             
             {/* Enhanced Order Now Button */}
-            <div className="ml-4 flex items-center space-x-3">
+            <div className="ml-2 lg:ml-4 flex items-center space-x-1 lg:space-x-3">
               <button
                 onClick={() => setIsOrderModalOpen(true)}
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-2 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold text-xs lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-1 lg:space-x-2"
               >
-                <Phone size={16} />
-                <span>Order Now</span>
+                <Phone size={12} className="lg:hidden" />
+                <Phone size={16} className="hidden lg:block" />
+                <span className="hidden lg:inline">Order Now</span>
+                <span className="lg:hidden">Order</span>
               </button>
               
               <a 
                 href="https://maps.app.goo.gl/jYHkSCiCiqm9XhKR7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded-full font-bold text-base hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
+                className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold text-xs lg:text-base hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-1 lg:space-x-2"
               >
-                <MapPin size={16} />
-                <span>Location</span>
+                <MapPin size={12} className="lg:hidden" />
+                <MapPin size={16} className="hidden lg:block" />
+                <span className="hidden lg:inline">Location</span>
+                <span className="lg:hidden">Map</span>
               </a>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300 relative"
+            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300 relative"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -158,7 +162,7 @@ export const Navigation: React.FC = () => {
         <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900 shadow-lg transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-red-900 lg:hidden">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-red-900 md:hidden">
             {navLinks.map((link, index) => (
               <Link
                 key={link.path}
