@@ -57,7 +57,7 @@ export const HomePage: React.FC = () => {
             {/* Right Column - Video Section (Desktop) */}
             <div className="flex flex-col items-center space-y-6 elegant-fade-in">
               {/* Logo - Desktop Only */}
-              <div className="mb-4 -mt-12">
+              <div className="mb-4 -mt-24">
                 <img 
                   src="https://i.imgur.com/13b6Lyj.png" 
                   alt="Azaad Indian Cuisine" 
