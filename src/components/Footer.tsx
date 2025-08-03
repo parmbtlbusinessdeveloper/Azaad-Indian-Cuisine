@@ -97,67 +97,67 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-3 mb-6">
               <img 
                 src="https://i.imgur.com/13b6Lyj.png" 
                 alt="Azaad Indian Cuisine" 
-                className="h-16 w-auto"
+                className="h-12 md:h-16 w-auto"
               />
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="premium-body text-gray-300 mb-6 leading-relaxed text-base md:text-lg max-w-md">
               Experience the authentic taste of Punjab with our traditional recipes 
               passed down through generations. Every dish is prepared with love and 
               the finest spices.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-yellow-300 hover:text-yellow-200 transition-colors">Facebook</a>
-              <a href="#" className="text-yellow-300 hover:text-yellow-200 transition-colors">Instagram</a>
-              <a href="#" className="text-yellow-300 hover:text-yellow-200 transition-colors">Yelp</a>
+            <div className="flex space-x-6">
+              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 font-medium">Facebook</a>
+              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 font-medium">Instagram</a>
+              <a href="#" className="premium-body text-yellow-300 hover:text-yellow-200 transition-colors duration-300 font-medium">Yelp</a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-yellow-300">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-yellow-300 transition-colors">Home</Link></li>
-              <li><Link to="/menu" className="text-gray-300 hover:text-yellow-300 transition-colors">Menu</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-yellow-300 transition-colors">Gallery</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-yellow-300 transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-yellow-300 transition-colors">Visit</Link></li>
+            <h3 className="refined-subheader font-semibold text-lg md:text-xl mb-4 md:mb-6 text-yellow-300">Quick Links</h3>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/" className="premium-body text-gray-300 hover:text-yellow-300 transition-colors duration-300 font-medium">Home</Link></li>
+              <li><Link to="/menu" className="premium-body text-gray-300 hover:text-yellow-300 transition-colors duration-300 font-medium">Menu</Link></li>
+              <li><Link to="/gallery" className="premium-body text-gray-300 hover:text-yellow-300 transition-colors duration-300 font-medium">Gallery</Link></li>
+              <li><Link to="/about" className="premium-body text-gray-300 hover:text-yellow-300 transition-colors duration-300 font-medium">About Us</Link></li>
+              <li><Link to="/contact" className="premium-body text-gray-300 hover:text-yellow-300 transition-colors duration-300 font-medium">Visit</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-yellow-300">Contact Us</h3>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center space-x-2">
+            <h3 className="refined-subheader font-semibold text-lg md:text-xl mb-4 md:mb-6 text-yellow-300">Contact Us</h3>
+            <div className="space-y-3 md:space-y-4 text-gray-300">
+              <div className="flex items-center space-x-3">
                 <Phone size={16} />
-                <a href="tel:+19512998307" className="hover:text-yellow-200 transition-colors">(951) 299-8307</a>
+                <a href="tel:+19512998307" className="premium-body hover:text-yellow-200 transition-colors duration-300 font-medium">(951) 299-8307</a>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <Mail size={16} />
-                <span>info@azaadcuisine.com</span>
+                <span className="premium-body font-medium">info@azaadcuisine.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-start space-x-3">
                 <MapPin size={16} />
-                <span>4290 Riverwalk Pkwy Ste 306<br />Riverside, CA 92505</span>
+                <span className="premium-body font-medium leading-relaxed">4290 Riverwalk Pkwy Ste 306<br />Riverside, CA 92505</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-start space-x-3">
                 <Clock size={16} />
                 <div>
-                  <div>Sunday - Saturday</div>
-                  <div className="text-sm">Lunch: 11:00 AM - 3:30 PM</div>
-                  <div className="text-sm">Dinner: 4:30 PM - 9:30 PM</div>
+                  <div className="premium-body font-medium">Sunday - Saturday</div>
+                  <div className="premium-body text-sm text-gray-400 mt-1">Lunch: 11:00 AM - 3:30 PM</div>
+                  <div className="premium-body text-sm text-gray-400">Dinner: 4:30 PM - 9:30 PM</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-red-800 mt-8 pt-8 text-center text-gray-400">
-          <p className="text-xs text-gray-500 mt-3" style={{ color: '#aaa' }}>
+        <div className="border-t border-red-800 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+          <p className="premium-body text-xs md:text-sm text-gray-500">
             &copy; 2025 Backhouse BTL UX Designs. All rights reserved.
           </p>
         </div>
