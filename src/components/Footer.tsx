@@ -163,7 +163,11 @@ export const Footer: React.FC = () => {
                 <span className="premium-body">Facebook</span>
               </a>
               <a 
-                href="#" 
+               href="https://www.instagram.com/azaadindiancuisine/"
+               target="_blank"
+               href="https://www.instagram.com/azaadindiancuisine/"
+               target="_blank"
+               rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-yellow-300 hover:text-yellow-200 transition-all duration-300 hover:scale-110"
                 aria-label="Follow us on Instagram"
               >
