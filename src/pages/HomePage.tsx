@@ -308,9 +308,12 @@ export const HomePage: React.FC = () => {
                   <p className="font-sans text-sm text-gray-500 fade-in-up">Coming Soon: Interior Photos</p>
                 </div>
               </div>
-                <div className="absolute top-4 left-4 text-2xl opacity-60 float wiggle">🍯</div>
-                <div className="absolute top-8 right-8 text-xl opacity-50 float wiggle">🥘</div>
-                <div className="absolute bottom-6 left-8 text-lg opacity-70 float wiggle">🧄</div>
+              <div className="absolute top-4 left-4 text-2xl opacity-60 float wiggle">🍯</div>
+              <div className="absolute top-8 right-8 text-xl opacity-50 float wiggle">🥘</div>
+              <div className="absolute bottom-6 left-8 text-lg opacity-70 float wiggle">🧄</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA Section */}
