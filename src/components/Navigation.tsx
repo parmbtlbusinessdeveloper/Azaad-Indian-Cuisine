@@ -155,10 +155,10 @@ export const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900 shadow-lg transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`lg:hidden absolute top-full left-0 right-0 bg-red-900 shadow-lg transition-all duration-300 overflow-hidden z-50 ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-red-900">
+          <div className="px-4 pt-4 pb-8 space-y-2 bg-red-900 min-h-fit">
             {navLinks.map((link, index) => (
               <Link
                 key={link.path}
@@ -180,7 +180,7 @@ export const Navigation: React.FC = () => {
             ))}
             
             {/* Mobile Order Button */}
-            <div className="pt-3 pb-2 space-y-3">
+            <div className="pt-4 pb-4 space-y-3">
               <button
                 onClick={() => {
                   setIsOrderModalOpen(true);
