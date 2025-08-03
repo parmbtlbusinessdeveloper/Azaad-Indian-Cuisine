@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 export const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
   const [showSparkles, setShowSparkles] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
   const [sparkles, setSparkles] = useState<Array<{ id: number; x: number; delay: number; duration: number }>>([]);
 
   useEffect(() => {
@@ -13,26 +14,29 @@ export const Footer: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !showSparkles) {
             setShowSparkles(true);
+            setAnimationKey(prev => prev + 1);
             
-            // Generate sparkles
-            const newSparkles = Array.from({ length: 15 }, (_, i) => ({
+            // Generate more sparkles with better distribution
+            const newSparkles = Array.from({ length: 22 }, (_, i) => ({
               id: i,
-              x: Math.random() * 100, // Random position across width
-              delay: Math.random() * 2, // Random delay up to 2s
-              duration: 3 + Math.random() * 2 // Duration between 3-5s
+              x: (i * 4.5 + Math.random() * 8) % 100, // More even distribution with slight randomness
+              delay: Math.random() * 2.5, // Slightly longer delay spread
+              duration: 3.5 + Math.random() * 1.5 // Refined duration range
             }));
             
             setSparkles(newSparkles);
             
-            // Remove sparkles after animation
+            // Clean up after animation completes
             setTimeout(() => {
               setShowSparkles(false);
               setSparkles([]);
-            }, 6000);
-          } else if (!entry.isIntersecting && showSparkles) {
-            // Reset when footer goes out of view
-            setShowSparkles(false);
-            setSparkles([]);
+            }, 6500);
+          } else if (!entry.isIntersecting) {
+            // Reset animation state when footer leaves view
+            if (showSparkles) {
+              setShowSparkles(false);
+              setSparkles([]);
+            }
           }
         });
       },
@@ -50,7 +54,7 @@ export const Footer: React.FC = () => {
     <footer ref={footerRef} className="bg-red-900 text-white relative overflow-hidden">
       {/* Sparkles Animation */}
       {showSparkles && (
-        <div className="absolute inset-0 pointer-events-none">
+        <div key={animationKey} className="absolute inset-0 pointer-events-none">
           {sparkles.map((sparkle) => (
             <div
               key={sparkle.id}
