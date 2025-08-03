@@ -403,7 +403,6 @@ export const MenuPage: React.FC = () => {
                 }}
                 className="w-full appearance-none bg-white border-2 border-red-900 rounded-lg px-4 py-3 pr-10 text-red-900 font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200"
               >
-                <option value="all">View Complete Menu</option>
                 {menuSections.map((section, index) => (
                   <option key={sectionIds[index]} value={sectionIds[index]}>
                     {section.title}
