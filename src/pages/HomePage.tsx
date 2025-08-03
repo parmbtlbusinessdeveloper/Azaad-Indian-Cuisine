@@ -113,7 +113,7 @@ export const HomePage: React.FC = () => {
                 className="premium-button bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 border border-white/20 flex items-center space-x-2"
               >
                 <Play size={18} />
-                <span>Watch Our Kitchen in Action</span>
+                <span>See More Action</span>
               </a>
             </div>
           </div>
@@ -197,15 +197,6 @@ export const HomePage: React.FC = () => {
                 Order Now
               </a>
             </div>
-            
-            {/* Watch Button - Mobile */}
-            <Link 
-              to="/gallery"
-              className="premium-button bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/20 border border-white/20 flex items-center space-x-2 elegant-fade-in"
-            >
-              <Play size={16} />
-              <span>Watch Our Kitchen in Action</span>
-            </Link>
           </div>
         </div>
       </section>
