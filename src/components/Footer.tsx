@@ -70,6 +70,9 @@ export const Footer: React.FC = () => {
 
         <div className="border-t border-red-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2025 Azaad Indian Cuisine. All rights reserved.</p>
+          <p className="text-xs text-gray-500 mt-3" style={{ color: '#aaa' }}>
+            &copy; 2025 Backhouse BTL UX Designs. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
