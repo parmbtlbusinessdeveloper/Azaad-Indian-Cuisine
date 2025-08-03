@@ -21,21 +21,24 @@ export const Footer: React.FC = () => {
               setShowSparkles(true);
               setAnimationKey(prev => prev + 1);
               
-              // Generate sparkles with better distribution
-              const newSparkles = Array.from({ length: 22 }, (_, i) => ({
+              // Generate sparkles with mobile-optimized count
+              const isMobile = window.innerWidth < 768;
+              const sparkleCount = isMobile ? 15 : 22;
+              const newSparkles = Array.from({ length: sparkleCount }, (_, i) => ({
                 id: i,
-                x: (i * 4.5 + Math.random() * 8) % 100,
-                delay: Math.random() * 2.5,
-                duration: 3.5 + Math.random() * 1.5
+                x: (i * (100 / sparkleCount) + Math.random() * 6) % 100,
+                delay: Math.random() * (isMobile ? 2 : 2.5),
+                duration: isMobile ? 3 + Math.random() * 1 : 3.5 + Math.random() * 1.5
               }));
               
               setSparkles(newSparkles);
               
               // Clean up after animation completes
+              const cleanupTime = isMobile ? 5000 : 6500;
               setTimeout(() => {
                 setShowSparkles(false);
                 setSparkles([]);
-              }, 6500);
+              }, cleanupTime);
             }
           } else {
             // Footer is no longer visible - reset for next visit
@@ -47,7 +50,10 @@ export const Footer: React.FC = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { 
+        threshold: window.innerWidth < 768 ? 0.2 : 0.3,
+        rootMargin: '0px 0px -50px 0px'
+      }
     );
 
     if (footerRef.current) {
