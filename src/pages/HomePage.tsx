@@ -36,8 +36,9 @@ export const HomePage: React.FC = () => {
             <div className="text-white space-y-8 fade-in">
               <div className="space-y-6">
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-wide">
-                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent flex items-center flex-wrap">
                     Authentic Indian
+                    <span className="fire-animation" role="img" aria-label="fire">🔥</span>
                   </span>
                   <span className="block text-white mt-3">
                     Cuisine
