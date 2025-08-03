@@ -248,33 +248,29 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Reviews Section */}
-      <section className="py-8 bg-gradient-to-r from-amber-50 to-orange-50">
-        <div className="premium-container">
-          <div className="text-center">
-            <a 
-              href="[PASTE GOOGLE REVIEWS URL HERE]"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 border-2 border-yellow-400 hover:border-yellow-500 rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50"
-              aria-label="View our 5 star reviews on Google"
-            >
-              <span className="text-2xl" role="img" aria-label="magnifying glass">🔍</span>
-              <span className="refined-subheader text-xl font-semibold text-red-900 tracking-wide">
-                5 Star Reviews
-              </span>
-              <div className="flex space-x-1 ml-2">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-500 text-lg" role="img" aria-label="star">⭐</span>
-                ))}
-              </div>
-            </a>
-            <p className="premium-body text-gray-600 mt-4 text-sm">
-              See what our customers are saying about their dining experience
-            </p>
-          </div>
+        
+        {/* 5 Star Reviews Button */}
+        <div className="text-center mt-12">
+          <a 
+            href="[PASTE GOOGLE REVIEWS URL HERE]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 border-2 border-yellow-400 hover:border-yellow-500 rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50 review-element"
+            aria-label="View our 5 star reviews on Google"
+          >
+            <span className="text-2xl" role="img" aria-label="magnifying glass">🔍</span>
+            <span className="refined-subheader text-xl font-semibold text-red-900 tracking-wide">
+              5 Star Reviews
+            </span>
+            <div className="flex space-x-1 ml-2">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-yellow-500 text-lg" role="img" aria-label="star">⭐</span>
+              ))}
+            </div>
+          </a>
+          <p className="premium-body text-gray-600 mt-4 text-sm">
+            See what our customers are saying about their dining experience
+          </p>
         </div>
       </section>
 
