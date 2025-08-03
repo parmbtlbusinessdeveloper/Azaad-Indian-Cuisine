@@ -128,7 +128,9 @@ export const Navigation: React.FC = () => {
               </button>
               
               <a 
-                href="/contact#map"
+                href="https://maps.app.goo.gl/jYHkSCiCiqm9XhKR7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
               >
                 <MapPin size={16} />
@@ -193,7 +195,9 @@ export const Navigation: React.FC = () => {
               </button>
               
               <a
-                href="/contact#map"
+                href="https://maps.app.goo.gl/jYHkSCiCiqm9XhKR7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-bold text-center transition-all duration-300 transform hover:scale-105 active:scale-95"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
