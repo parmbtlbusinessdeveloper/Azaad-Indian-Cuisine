@@ -92,7 +92,9 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-red-900 text-lg">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">
+                      <a href="tel:+19512998307" className="hover:text-red-700 transition-colors">(951) 299-8307</a>
+                    </p>
                     <p className="text-sm text-gray-500">Call for reservations or takeout orders</p>
                   </div>
                 </div>
@@ -114,7 +116,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-red-900 text-lg">Address</h3>
-                    <p className="text-gray-600">123 Main Street<br />City, State 12345</p>
+                    <p className="text-gray-600">4290 Riverwalk Pkwy Ste 306<br />Riverside, CA 92505</p>
                     <p className="text-sm text-gray-500">Easy parking available</p>
                   </div>
                 </div>
@@ -126,9 +128,9 @@ export const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-red-900 text-lg">Hours</h3>
                     <div className="text-gray-600">
-                      <p>Monday - Thursday: 11:00 AM - 9:30 PM</p>
-                      <p>Friday - Saturday: 11:00 AM - 10:30 PM</p>
-                      <p>Sunday: 12:00 PM - 9:00 PM</p>
+                      <p className="font-medium mb-1">Sunday - Saturday</p>
+                      <p>Lunch: 11:00 AM - 3:30 PM</p>
+                      <p>Dinner: 4:30 PM - 9:30 PM</p>
                     </div>
                   </div>
                 </div>
@@ -231,7 +233,7 @@ export const ContactPage: React.FC = () => {
               </div>
               <p className="font-medium text-lg">Google Maps Integration</p>
               <p className="text-sm">Replace with embedded Google Maps</p>
-              <p className="text-sm mt-2">123 Main Street, City, State 12345</p>
+              <p className="text-sm mt-2">4290 Riverwalk Pkwy Ste 306, Riverside, CA 92505</p>
             </div>
           </div>
         </div>

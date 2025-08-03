@@ -42,8 +42,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
           {/* Call Now Button */}
           <button
             onClick={() => {
-              // Placeholder - will be updated with actual phone number
-              alert('Call (555) 123-4567 to place your order');
+              window.location.href = 'tel:+19512998307';
               onClose();
             }}
             className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white p-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-3"
@@ -82,7 +81,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
         {/* Footer */}
         <div className="bg-amber-50 p-4 rounded-b-2xl text-center">
           <p className="text-sm text-gray-600">
-            Questions? Call us at <span className="font-semibold text-red-900">(555) 123-4567</span>
+            Questions? Call us at <span className="font-semibold text-red-900">(951) 299-8307</span>
           </p>
         </div>
       </div>

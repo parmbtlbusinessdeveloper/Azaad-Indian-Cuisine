@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone size={16} />
-                <span>(555) 123-4567</span>
+                <a href="tel:+19512998307" className="hover:text-yellow-200 transition-colors">(951) 299-8307</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
@@ -54,11 +54,15 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} />
-                <span>123 Main Street<br />City, State 12345</span>
+                <span>4290 Riverwalk Pkwy Ste 306<br />Riverside, CA 92505</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock size={16} />
-                <span>Daily: 11AM - 10PM</span>
+                <div>
+                  <div>Sunday - Saturday</div>
+                  <div className="text-sm">Lunch: 11:00 AM - 3:30 PM</div>
+                  <div className="text-sm">Dinner: 4:30 PM - 9:30 PM</div>
+                </div>
               </div>
             </div>
           </div>

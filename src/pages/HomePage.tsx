@@ -347,7 +347,7 @@ export const HomePage: React.FC = () => {
               Order Now
             </button>
             <a 
-              href="https://maps.google.com/?q=123+Main+Street,+City,+State+12345"
+              href="https://maps.google.com/?q=4290+Riverwalk+Pkwy+Ste+306,+Riverside,+CA+92505"
               target="_blank"
               rel="noopener noreferrer"
               className="premium-button border-2 border-yellow-300 text-yellow-300 px-12 py-4 rounded-full font-bold text-xl hover:bg-yellow-300 hover:text-red-900 shadow-lg hover:shadow-xl transform hover:scale-105"
