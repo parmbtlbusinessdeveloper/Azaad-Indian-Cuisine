@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { OrderModal } from '../components/OrderModal';
 
 interface MenuItem {
@@ -21,6 +21,9 @@ export const MenuPage: React.FC = () => {
   const [activeSection, setActiveSection] = useState('appetizers');
   const [previousSection, setPreviousSection] = useState('appetizers');
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   const menuSections: MenuSection[] = [
     {
@@ -334,6 +337,52 @@ export const MenuPage: React.FC = () => {
     }
   };
 
+  // Check if scrolling is needed and update arrow visibility
+  const checkScrollButtons = React.useCallback(() => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const canScrollLeft = container.scrollLeft > 0;
+      const canScrollRight = container.scrollLeft < (container.scrollWidth - container.clientWidth);
+      
+      setShowLeftArrow(canScrollLeft);
+      setShowRightArrow(canScrollRight);
+    }
+  }, []);
+
+  // Handle scroll navigation
+  const scrollCategories = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 200;
+      const newScrollLeft = direction === 'left' 
+        ? scrollContainerRef.current.scrollLeft - scrollAmount
+        : scrollContainerRef.current.scrollLeft + scrollAmount;
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Set up scroll event listener and initial check
+  React.useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      checkScrollButtons();
+      container.addEventListener('scroll', checkScrollButtons);
+      
+      // Check on resize
+      const handleResize = () => {
+        setTimeout(checkScrollButtons, 100);
+      };
+      window.addEventListener('resize', handleResize);
+      
+      return () => {
+        container.removeEventListener('scroll', checkScrollButtons);
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [checkScrollButtons]);
   return (
     <div className="pt-16 min-h-screen bg-amber-50">
       <OrderModal 
@@ -396,20 +445,52 @@ export const MenuPage: React.FC = () => {
       <div className="bg-white border-b-2 border-yellow-200 sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Navigation - Hidden on mobile */}
-          <div className="hidden md:flex overflow-x-auto py-4 space-x-6 scrollbar-hide">
-            {menuSections.map((section, index) => (
+          <div className="hidden md:flex items-center py-4 relative">
+            {/* Left Arrow */}
+            {showLeftArrow && (
               <button
-                key={sectionIds[index]}
-                onClick={() => handleSectionChange(sectionIds[index])}
-                className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
-                  activeSection === sectionIds[index]
-                    ? 'bg-red-900 text-white'
-                    : 'text-red-900 hover:bg-red-100'
-                }`}
+                onClick={() => scrollCategories('left')}
+                className="absolute left-0 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm border border-red-200 rounded-full flex items-center justify-center text-red-900 hover:bg-red-50 hover:border-red-300 transition-all duration-200 shadow-md hover:shadow-lg"
+                aria-label="Scroll categories left"
               >
-                {section.title}
+                <ChevronLeft size={20} />
               </button>
-            ))}
+            )}
+            
+            {/* Categories Container */}
+            <div 
+              ref={scrollContainerRef}
+              className="flex overflow-x-auto space-x-6 scrollbar-hide px-12 mx-auto"
+              style={{ 
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
+              {menuSections.map((section, index) => (
+                <button
+                  key={sectionIds[index]}
+                  onClick={() => handleSectionChange(sectionIds[index])}
+                  className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 flex-shrink-0 ${
+                    activeSection === sectionIds[index]
+                      ? 'bg-red-900 text-white shadow-md'
+                      : 'text-red-900 hover:bg-red-100'
+                  }`}
+                >
+                  {section.title}
+                </button>
+              ))}
+            </div>
+            
+            {/* Right Arrow */}
+            {showRightArrow && (
+              <button
+                onClick={() => scrollCategories('right')}
+                className="absolute right-0 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm border border-red-200 rounded-full flex items-center justify-center text-red-900 hover:bg-red-50 hover:border-red-300 transition-all duration-200 shadow-md hover:shadow-lg"
+                aria-label="Scroll categories right"
+              >
+                <ChevronRight size={20} />
+              </button>
+            )}
           </div>
           
           {/* Mobile Dropdown Navigation - Hidden on desktop */}
