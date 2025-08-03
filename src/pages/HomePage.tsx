@@ -339,14 +339,22 @@ export const HomePage: React.FC = () => {
             Join us for lunch or dinner and discover why we're the community's 
             favorite destination for Indian cuisine.
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="https://www.toasttab.com/azaad-indian-cuisine"
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-button bg-gradient-to-r from-green-500 to-emerald-600 text-white px-12 py-4 rounded-full font-bold text-xl hover:from-green-400 hover:to-emerald-500 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="premium-button bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-12 py-4 rounded-full font-bold text-xl hover:from-yellow-400 hover:to-orange-400 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Order Now
+            </a>
+            <a 
+              href="https://maps.google.com/?q=123+Main+Street,+City,+State+12345"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button border-2 border-yellow-300 text-yellow-300 px-12 py-4 rounded-full font-bold text-xl hover:bg-yellow-300 hover:text-red-900 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Get Directions
             </a>
           </div>
         </div>
