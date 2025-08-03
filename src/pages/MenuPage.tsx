@@ -396,7 +396,8 @@ export const MenuPage: React.FC = () => {
             </div>
             
             <p className="vintage-menu-subtitle text-xl md:text-2xl lg:text-3xl text-yellow-200 italic font-light leading-relaxed max-w-4xl mx-auto">
-              Artisanal Punjabi cuisine crafted with time-honored recipes and the finest ingredients from the heart of India
+              <p className="premium-menu-subtitle text-xl md:text-2xl lg:text-3xl text-yellow-200 italic font-light leading-relaxed max-w-4xl mx-auto">
+              Authentic Punjabi flavors with traditional recipes passed down through generations. Family-owned restaurant bringing the flavors of Punjab to your table.
             </p>
           
           {/* Ornamental Bottom Flourish */}
