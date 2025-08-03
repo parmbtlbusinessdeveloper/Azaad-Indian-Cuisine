@@ -36,19 +36,18 @@ export const Footer: React.FC = () => {
               setAnimationKey(prev => prev + 1);
               
               // Generate sparkles with mobile-optimized count
-              const isMobile = window.innerWidth < 768;
-              const sparkleCount = isMobile ? 8 : 22;
+              const sparkleCount = 22;
               const newSparkles = Array.from({ length: sparkleCount }, (_, i) => ({
                 id: i,
                 x: (i * (100 / sparkleCount) + Math.random() * 6) % 100,
-                delay: Math.random() * (isMobile ? 1.5 : 2.5),
-                duration: isMobile ? 2 + Math.random() * 0.5 : 3.5 + Math.random() * 1.5
+                delay: Math.random() * 2.5,
+                duration: 3.5 + Math.random() * 1.5
               }));
               
               setSparkles(newSparkles);
               
               // Clean up after animation completes
-              const cleanupTime = isMobile ? 3000 : 6500;
+              const cleanupTime = 6500;
               setTimeout(() => {
                 setShowSparkles(false);
                 setSparkles([]);
@@ -65,7 +64,7 @@ export const Footer: React.FC = () => {
         });
       },
       { 
-        threshold: window.innerWidth < 768 ? 0.2 : 0.3,
+        threshold: 0.3,
         rootMargin: '0px 0px -50px 0px'
       }
     );
