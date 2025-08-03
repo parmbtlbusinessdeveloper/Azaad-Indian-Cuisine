@@ -37,13 +37,10 @@ export const HomePage: React.FC = () => {
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent">
-                    Authentic Punjabi
+                    Authentic Indian
                   </span>
                   <span className="block text-white mt-2">
-                    Cuisine Straight
-                  </span>
-                  <span className="block text-white">
-                    from the Heart
+                    Cuisine
                   </span>
                 </h1>
                 
