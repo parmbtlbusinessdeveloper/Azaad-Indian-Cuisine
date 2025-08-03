@@ -18,6 +18,7 @@ interface MenuSection {
 
 export const MenuPage: React.FC = () => {
   const [activeSection, setActiveSection] = useState('appetizers');
+  const [previousSection, setPreviousSection] = useState('appetizers');
 
   const menuSections: MenuSection[] = [
     {
@@ -313,6 +314,22 @@ export const MenuPage: React.FC = () => {
 
   const sectionIds = ['appetizers', 'chicken', 'lamb', 'seafood', 'vegetarian', 'biryani', 'breads', 'sides', 'beverages', 'desserts'];
 
+  const handleSectionChange = (sectionId: string) => {
+    if (sectionId !== 'all' && activeSection !== 'all') {
+      setPreviousSection(activeSection);
+    }
+    setActiveSection(sectionId);
+  };
+
+  const handleCompleteMenuToggle = () => {
+    if (activeSection === 'all') {
+      setActiveSection(previousSection);
+    } else {
+      setPreviousSection(activeSection);
+      setActiveSection('all');
+    }
+  };
+
   return (
     <div className="pt-16 min-h-screen bg-amber-50">
       {/* Header */}
@@ -374,7 +391,7 @@ export const MenuPage: React.FC = () => {
             {menuSections.map((section, index) => (
               <button
                 key={sectionIds[index]}
-                onClick={() => setActiveSection(sectionIds[index])}
+                onClick={() => handleSectionChange(sectionIds[index])}
                 className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                   activeSection === sectionIds[index]
                     ? 'bg-red-900 text-white'
@@ -392,7 +409,7 @@ export const MenuPage: React.FC = () => {
               <select
                 value={activeSection}
                 onChange={(e) => {
-                  setActiveSection(e.target.value);
+                  handleSectionChange(e.target.value);
                   // Smooth scroll to section if not 'all'
                   if (e.target.value !== 'all') {
                     const element = document.getElementById(e.target.value);
@@ -472,14 +489,14 @@ export const MenuPage: React.FC = () => {
       {/* Show All Sections Button */}
       <div className="hidden lg:block text-center pb-12">
         <button
-          onClick={() => setActiveSection('all')}
+          onClick={handleCompleteMenuToggle}
           className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
             activeSection === 'all'
               ? 'bg-red-900 text-white'
               : 'border-2 border-red-900 text-red-900 hover:bg-red-900 hover:text-white'
           }`}
         >
-          View Complete Menu
+          {activeSection === 'all' ? 'Back to Categories' : 'View Complete Menu'}
         </button>
       </div>
 
