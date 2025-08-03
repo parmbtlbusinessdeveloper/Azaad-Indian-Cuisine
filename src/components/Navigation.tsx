@@ -95,17 +95,16 @@ export const Navigation: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-white font-medium text-sm lg:text-base tracking-wide transition-all duration-300 rounded-lg group ${
+                className={`relative px-4 py-2 text-white font-medium text-sm lg:text-base tracking-wide transition-all duration-300 rounded-lg ${
                   location.pathname === link.path 
                     ? 'text-yellow-300 bg-white/10' 
                     : 'hover:text-yellow-300 hover:bg-white/5'
                 }`}
               >
-                {/* Active and hover underline effect */}
                 <span className={`absolute bottom-0 left-1/2 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 rounded-full ${
                   location.pathname === link.path 
                     ? 'w-3/4 -translate-x-1/2' 
-                    : 'w-0 group-hover:w-3/4 group-hover:-translate-x-1/2'
+                    : 'w-0 hover:w-3/4 hover:-translate-x-1/2'
                 }`}></span>
                 {link.label}
               </Link>
@@ -116,7 +115,7 @@ export const Navigation: React.FC = () => {
               href="https://www.toasttab.com/azaad-indian-cuisine"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25 flex items-center space-x-2 border border-yellow-400/20"
+              className="ml-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-red-900 px-6 py-2.5 rounded-full font-bold text-sm lg:text-base hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <Phone size={16} />
               <span>Order Now</span>
